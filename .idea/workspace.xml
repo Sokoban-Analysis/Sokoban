@@ -49,7 +49,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../BLDToolAddon" />
     <property name="settings.editor.selected.configurable" value="configurable.group.tools" />
   </component>
   <component name="RunManager">
@@ -107,10 +107,11 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="515" y="166" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.824@0.0.1536.824" timestamp="1602311562171" />
-    <state x="549" y="127" key="FileChooserDialogImpl" timestamp="1600493172155">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state x="915" y="222" key="FileChooserDialogImpl" timestamp="1602402485363">
+      <screen x="0" y="0" width="2560" height="1440" />
     </state>
     <state x="549" y="127" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1600493172155" />
+    <state x="915" y="222" key="FileChooserDialogImpl/0.0.2560.1440/-1920.349.1920.1080@0.0.2560.1440" timestamp="1602402485363" />
     <state width="2517" height="121" key="GridCell.Tab.0.bottom" timestamp="1602401015252">
       <screen x="0" y="0" width="2560" height="1440" />
     </state>
