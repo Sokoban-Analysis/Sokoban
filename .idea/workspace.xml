@@ -20,13 +20,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cdbf11fd-8829-45d4-95d5-fae79ca40161" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/com/zetcode/BoardKeyListner.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/zetcode/StaticVar.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/zetcode/SoundSystem.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Java-Sokoban-Game/com/zetcode/Board$TAdapter.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/background.wav" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/background.wav" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Java-Sokoban-Game/com/zetcode/Board.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Java-Sokoban-Game/com/zetcode/Board.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Java-Sokoban-Game/com/zetcode/Wall.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Java-Sokoban-Game/com/zetcode/Wall.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/zetcode/Board.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/zetcode/Board.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/zetcode/PanelChange.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/zetcode/PanelChange.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/zetcode/Wall.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/zetcode/Wall.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/success.wav" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/success.wav" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,6 +60,11 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../BLDToolAddon" />
     <property name="settings.editor.selected.configurable" value="configurable.group.tools" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\garbi\IdeaProjects\Java-Sokoban-Game\src\resources" />
+    </key>
   </component>
   <component name="RunManager" selected="Application.Sokoban">
     <configuration name="Frame" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
@@ -139,26 +145,26 @@
     </state>
     <state x="549" y="127" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1600493172155" />
     <state x="915" y="222" key="FileChooserDialogImpl/0.0.2560.1440/-1920.349.1920.1080@0.0.2560.1440" timestamp="1602455400863" />
-    <state width="2517" height="121" key="GridCell.Tab.0.bottom" timestamp="1602456253618">
+    <state width="2517" height="121" key="GridCell.Tab.0.bottom" timestamp="1602457227378">
       <screen x="0" y="0" width="2560" height="1440" />
     </state>
     <state width="1230" height="195" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1602443474946" />
-    <state width="2517" height="121" key="GridCell.Tab.0.bottom/0.0.2560.1440/-1920.349.1920.1080@0.0.2560.1440" timestamp="1602456253618" />
-    <state width="2517" height="121" key="GridCell.Tab.0.center" timestamp="1602456253618">
+    <state width="2517" height="121" key="GridCell.Tab.0.bottom/0.0.2560.1440/-1920.349.1920.1080@0.0.2560.1440" timestamp="1602457227378" />
+    <state width="2517" height="121" key="GridCell.Tab.0.center" timestamp="1602457227378">
       <screen x="0" y="0" width="2560" height="1440" />
     </state>
     <state width="1230" height="195" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1602443474946" />
-    <state width="2517" height="121" key="GridCell.Tab.0.center/0.0.2560.1440/-1920.349.1920.1080@0.0.2560.1440" timestamp="1602456253618" />
-    <state width="2517" height="121" key="GridCell.Tab.0.left" timestamp="1602456253618">
+    <state width="2517" height="121" key="GridCell.Tab.0.center/0.0.2560.1440/-1920.349.1920.1080@0.0.2560.1440" timestamp="1602457227378" />
+    <state width="2517" height="121" key="GridCell.Tab.0.left" timestamp="1602457227377">
       <screen x="0" y="0" width="2560" height="1440" />
     </state>
     <state width="1230" height="195" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1602443474946" />
-    <state width="2517" height="121" key="GridCell.Tab.0.left/0.0.2560.1440/-1920.349.1920.1080@0.0.2560.1440" timestamp="1602456253618" />
-    <state width="2517" height="121" key="GridCell.Tab.0.right" timestamp="1602456253618">
+    <state width="2517" height="121" key="GridCell.Tab.0.left/0.0.2560.1440/-1920.349.1920.1080@0.0.2560.1440" timestamp="1602457227377" />
+    <state width="2517" height="121" key="GridCell.Tab.0.right" timestamp="1602457227378">
       <screen x="0" y="0" width="2560" height="1440" />
     </state>
     <state width="1230" height="195" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1602443474946" />
-    <state width="2517" height="121" key="GridCell.Tab.0.right/0.0.2560.1440/-1920.349.1920.1080@0.0.2560.1440" timestamp="1602456253618" />
+    <state width="2517" height="121" key="GridCell.Tab.0.right/0.0.2560.1440/-1920.349.1920.1080@0.0.2560.1440" timestamp="1602457227378" />
     <state x="345" y="52" key="SettingsEditor" timestamp="1602172827092">
       <screen x="0" y="0" width="1536" height="824" />
     </state>

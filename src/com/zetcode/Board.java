@@ -17,6 +17,8 @@ public class Board extends JPanel implements ActionListener {
     private ArrayList<Wall> walls;
     private ArrayList<Baggage> baggs;
     private ArrayList<Area> areas;
+    private SoundSystem soundBG;
+    private SoundSystem sucessSound;
 
     public Player soko;
     private String level;
@@ -26,22 +28,13 @@ public class Board extends JPanel implements ActionListener {
 
     public Board(String level) {//생성자
         this.level = level;
+        soundBG = new SoundSystem(new File("src/resources/background.wav"));
+        soundBG.play();
         setOffsetPosition();
         initWorld();
-        bgsound();
         mTimer.start();
     }
 
-    private static void bgsound(){//배경음
-        try {
-            AudioInputStream stream = AudioSystem.getAudioInputStream(new File("background.wav"));
-            Clip clip = AudioSystem.getClip();
-            clip.open(stream);
-            clip.loop(clip.LOOP_CONTINUOUSLY);
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-    }
 
     private void setOffsetPosition(){
         int maxOffset = 0;
@@ -389,11 +382,9 @@ public class Board extends JPanel implements ActionListener {
             isCompleted = true;
             repaint();
             try {//게임 성공하면 효과음
-                AudioInputStream stream = AudioSystem.getAudioInputStream(new File("success.wav"));
-                Clip clip = AudioSystem.getClip();
-                clip.stop();
-                clip.open(stream);
-                clip.start();
+                sucessSound = new SoundSystem(new File("src/resources/success.wav"));
+                soundBG.stop();
+                sucessSound.play();
             } catch (Exception e) {
                 e.printStackTrace();
             }
