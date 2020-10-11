@@ -15,7 +15,7 @@ public class Sokoban extends JFrame {
         
         Board board = new Board();
         add(board);
-
+//소코반
         setTitle("Sokoban");
         
         setSize(board.getBoardWidth() + OFFSET,
