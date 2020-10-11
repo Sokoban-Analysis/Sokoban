@@ -30,7 +30,6 @@ public class Board extends JPanel implements ActionListener {
     private int score = 0;
 
     private boolean isCompleted = false;
-//레벨 버튼 생성해서 클릭하면 그 화면 나오게..
 
     private String level1
             ="####### \n" +
