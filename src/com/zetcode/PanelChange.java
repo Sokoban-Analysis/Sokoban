@@ -3,6 +3,8 @@ package com.zetcode;
 import javax.swing.*;
 import java.awt.*;
 
+import static com.zetcode.StaticVar.*;
+
 public class PanelChange extends JFrame {
     public Board board = null;
     public MainUI mainUi = null;
@@ -19,8 +21,10 @@ public class PanelChange extends JFrame {
 
 
     public void initBoard(){
-        board = new Board();
+        board = new Board(level1);
         getContentPane().add("board",board);
+        getContentPane().addKeyListener(new BoardKeyListner(board));
+        getContentPane().setFocusable(true);
         setTitle("Sokoban - Board");
     }
 

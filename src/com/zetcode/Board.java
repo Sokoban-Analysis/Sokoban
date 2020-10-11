@@ -10,85 +10,24 @@ import javax.sound.sampled.AudioInputStream;
 import javax.sound.sampled.AudioSystem;
 import javax.sound.sampled.Clip;
 import java.io.File;
+import static com.zetcode.StaticVar.*;
 
 public class Board extends JPanel implements ActionListener {
-
-    private final int OFFSET = 30;//거리
-    private final int SPACE = 20;
-    private final int LEFT_COLLISION = 1;
-    private final int RIGHT_COLLISION = 2;
-    private final int TOP_COLLISION = 3;
-    private final int BOTTOM_COLLISION = 4;
 
     private ArrayList<Wall> walls;
     private ArrayList<Baggage> baggs;
     private ArrayList<Area> areas;
 
-    private Player soko;
-    private int w = 0;
-    private int h = 0;
+    public Player soko;
+    private String level;
     private int score = 0;
 
-    private boolean isCompleted = false;
+    public boolean isCompleted = false;
 
-    private String level1
-            ="####### \n" +
-            "#@  # # \n" +
-            "#   $ # \n" +
-            "#   $ # \n" +
-            "# ..  # \n" +
-            "#  *  # \n" +
-            "####### \n";
-
-    private String level2
-            =" ####    \n" +
-            "  #  ##### \n" +
-            "### .#   # \n" +
-            "#@  $    # \n" +
-            "# ## ##### \n" +
-            "#   $  #   \n" +
-            "### .  #   \n" +
-            "  #  ###   \n" +
-            "  ####   \n";
-
-    private String level3
-            ="######### \n"
-            +"#   #   # \n"
-            +"# # #$.## \n"
-            +"#    $.#  \n"
-            +"# # #$.#  \n"
-            +"#       # \n"
-            +"#####@  # \n"
-            +"    ####  \n";
-
-    private String level4
-            ="###############\n" +
-            "# #   #   ## .#\n" +
-            "#  # $    $  .#\n" +
-            "#      #  #   #\n" +
-            "#    $## ##   #\n" +
-            "#$    #  .#  $#\n" +
-            "#   ###  ##   #\n" +
-            "#   ## $  #  ##\n" +
-            "#...#     #  @#\n" +
-            "###############\n";
-
-    private String level5
-            = "    ######\n"
-            + "    ##   #\n"
-            + "    ##$  #\n"
-            + "  ####  $##\n"
-            + "  ##  $ $ #\n"
-            + "#### # ## #   ######\n"
-            + "##   # ## #####  ..#\n"
-            + "## $  $          ..#\n"
-            + "###### ### #@##  ..#\n"
-            + "    ##     #########\n"
-            + "    ########\n";
-
-    public Board() {//생성자
-
-        initBoard();
+    public Board(String level) {//생성자
+        this.level = level;
+        setOffsetPosition();
+        initWorld();
         bgsound();
         mTimer.start();
     }
@@ -104,19 +43,27 @@ public class Board extends JPanel implements ActionListener {
         }
     }
 
-    private void initBoard() {
-
-        addKeyListener(new TAdapter());
-        setFocusable(true);
-        initWorld();
-    }
-
-    public int getBoardWidth() {
-        return this.w;
-    }
-
-    public int getBoardHeight() {
-        return this.h;
+    private void setOffsetPosition(){
+        int maxOffset = 0;
+        for (int i = 0; i < level.length(); i++) {
+            char item = level.charAt(i);//level의 i번째 인덱스 가져오기
+            switch (item) {
+                case '\n':
+                    Yoffset += SPACE;
+                    if(Xoffset > maxOffset){
+                        maxOffset = Xoffset;
+                    }
+                    Xoffset = 0;
+                    break;
+                default:
+                    Xoffset += SPACE;
+                    break;
+            }
+        }
+        Xoffset = maxOffset/2;
+        Yoffset = Yoffset/2;
+        System.out.println(Xoffset);
+        System.out.println(Yoffset);
     }
 
     private void initWorld() {
@@ -125,66 +72,48 @@ public class Board extends JPanel implements ActionListener {
         baggs = new ArrayList<>();
         areas = new ArrayList<>();
 
-        int x = OFFSET;
-        int y = OFFSET;
+        int x = 640 - Xoffset;
+        int y = 360 - Yoffset;
 
         Wall wall;
         Baggage b;
         Area a;
 
-        for (int i = 0; i < level4.length(); i++) {
-
-            char item = level4.charAt(i);//level의 i번째 인덱스 가져오기
-
+        for (int i = 0; i < level.length(); i++) {
+            char item = level.charAt(i);//level의 i번째 인덱스 가져오기
             switch (item) {
-
                 case '\n':
                     y += SPACE;
-
-                    if (this.w < x) {//보드 넓이가 offset보다 작으면
-                        this.w = x;
-                    }
-
-                    x = OFFSET;
+                    x = 640 - Xoffset;
                     break;
-
                 case '#'://벽
                     wall = new Wall(x, y);
                     walls.add(wall);//walls 배열에 wall 추가
                     x += SPACE;
                     break;
-
                 case '$'://옮겨야하는 공
                     b = new Baggage(x, y);//초기화??
                     baggs.add(b);
                     x += SPACE;
                     break;
-
                 case '.':
                     a = new Area(x, y);//공을 이 여섯칸짜리 Area에다 옮겨야 함
                     areas.add(a);
                     x += SPACE;
                     break;
-
                 case '@'://플레이어(공 옮기는 역할)
                     soko = new Player(x, y);
                     x += SPACE;
                     break;
-
                 case ' '://공백
                     x += SPACE;
                     break;
-
                 default:
                     break;
             }
-
-            h = y;//높이는 y(offset)
         }
     }
-
     private void buildWorld(Graphics g) {
-
         g.setColor(new Color(250, 240, 170));
         g.fillRect(0, 0, this.getWidth(), this.getHeight());
 
@@ -233,95 +162,10 @@ public class Board extends JPanel implements ActionListener {
     @Override
     public void paintComponent(Graphics g) {
         super.paintComponent(g);
-
         buildWorld(g);
     }
 
-    private class TAdapter extends KeyAdapter {
-
-        @Override
-        public void keyPressed(KeyEvent e) {
-
-            if (isCompleted) {
-                return;
-            }
-
-            int key = e.getKeyCode();
-
-            switch (key) {
-                
-                case KeyEvent.VK_LEFT:
-                    
-                    if (checkWallCollision(soko,
-                            LEFT_COLLISION)) {
-                        return;
-                    }
-                    
-                    if (checkBagCollision(LEFT_COLLISION)) {
-                        return;
-                    }
-                    
-                    soko.move(-SPACE, 0);
-                    
-                    break;
-                    
-                case KeyEvent.VK_RIGHT:
-                    
-                    if (checkWallCollision(soko, RIGHT_COLLISION)) {
-                        return;
-                    }
-                    
-                    if (checkBagCollision(RIGHT_COLLISION)) {
-                        return;
-                    }
-                    
-                    soko.move(SPACE, 0);
-                    
-                    break;
-                    
-                case KeyEvent.VK_UP:
-                    
-                    if (checkWallCollision(soko, TOP_COLLISION)) {
-                        return;
-                    }
-                    
-                    if (checkBagCollision(TOP_COLLISION)) {
-                        return;
-                    }
-                    
-                    soko.move(0, -SPACE);
-                    
-                    break;
-                    
-                case KeyEvent.VK_DOWN:
-                    
-                    if (checkWallCollision(soko, BOTTOM_COLLISION)) {
-                        return;
-                    }
-                    
-                    if (checkBagCollision(BOTTOM_COLLISION)) {
-                        return;
-                    }
-                    
-                    soko.move(0, SPACE);
-                    
-                    break;
-                    
-                case KeyEvent.VK_R:
-                    
-                    restartLevel();
-                    
-                    break;
-                    
-                default:
-                    break;
-            }
-
-            repaint();
-        }
-    }
-
-    private boolean checkWallCollision(Actor actor, int type) {
+    public boolean checkWallCollision(Actor actor, int type) {
 
         switch (type) {
             
@@ -387,7 +231,7 @@ public class Board extends JPanel implements ActionListener {
         return false;
     }
 
-    private boolean checkBagCollision(int type) {
+    public boolean checkBagCollision(int type) {
 
         switch (type) {
             
@@ -523,7 +367,6 @@ public class Board extends JPanel implements ActionListener {
     }
 
     public void isCompleted() {//게임 끝
-
         int nOfBags = baggs.size();
         int finishedBags = 0;//다 옮긴 짐 개수
         int n = 10;//시간 제한
@@ -542,9 +385,7 @@ public class Board extends JPanel implements ActionListener {
                 }
             }
         }
-
         if (finishedBags == nOfBags) {
-            
             isCompleted = true;
             repaint();
             try {//게임 성공하면 효과음
@@ -559,7 +400,7 @@ public class Board extends JPanel implements ActionListener {
         }
     }
 
-    private void restartLevel() {
+    public void restartLevel() {
 
         areas.clear();
         baggs.clear();
