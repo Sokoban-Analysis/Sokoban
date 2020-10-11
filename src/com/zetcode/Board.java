@@ -2,6 +2,8 @@ package com.zetcode;
 
 import java.awt.*;
 import java.awt.event.*;
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
 import java.util.ArrayList;
 import javax.swing.*;
 import javax.sound.sampled.AudioInputStream;
@@ -21,14 +23,58 @@ public class Board extends JPanel implements ActionListener {
     private ArrayList<Wall> walls;
     private ArrayList<Baggage> baggs;
     private ArrayList<Area> areas;
-    
+
     private Player soko;
     private int w = 0;
     private int h = 0;
-    
-    private boolean isCompleted = false;
+    private int score = 0;
 
-    private String level
+    private boolean isCompleted = false;
+//레벨 버튼 생성해서 클릭하면 그 화면 나오게..
+
+    private String level1
+            ="####### \n" +
+            "#@  # # \n" +
+            "#   $ # \n" +
+            "#   $ # \n" +
+            "# ..  # \n" +
+            "#  *  # \n" +
+            "####### \n";
+
+    private String level2
+            =" ####    \n" +
+            "  #  ##### \n" +
+            "### .#   # \n" +
+            "#@  $    # \n" +
+            "# ## ##### \n" +
+            "#   $  #   \n" +
+            "### .  #   \n" +
+            "  #  ###   \n" +
+            "  ####   \n";
+
+    private String level3
+            ="######### \n"
+            +"#   #   # \n"
+            +"# # #$.## \n"
+            +"#    $.#  \n"
+            +"# # #$.#  \n"
+            +"#       # \n"
+            +"#####@  # \n"
+            +"    ####  \n";
+
+    private String level4
+            ="###############\n" +
+            "# #   #   ## .#\n" +
+            "#  # $    $  .#\n" +
+            "#      #  #   #\n" +
+            "#    $## ##   #\n" +
+            "#$    #  .#  $#\n" +
+            "#   ###  ##   #\n" +
+            "#   ## $  #  ##\n" +
+            "#...#     #  @#\n" +
+            "###############\n";
+
+    private String level5
             = "    ######\n"
             + "    ##   #\n"
             + "    ##$  #\n"
@@ -87,9 +133,9 @@ public class Board extends JPanel implements ActionListener {
         Baggage b;
         Area a;
 
-        for (int i = 0; i < level.length(); i++) {
+        for (int i = 0; i < level4.length(); i++) {
 
-            char item = level.charAt(i);//level의 i번째 인덱스 가져오기
+            char item = level4.charAt(i);//level의 i번째 인덱스 가져오기
 
             switch (item) {
 
