@@ -20,26 +20,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cdbf11fd-8829-45d4-95d5-fae79ca40161" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/com/zetcode/panel/MakeButton.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/resources/menu/1p.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/resources/menu/2p.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/resources/menu/continue.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/resources/menu/down/1p.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/resources/menu/down/2p.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/resources/menu/down/continue.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/resources/menu/down/l1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/resources/menu/down/l2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/resources/menu/down/l3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/resources/menu/down/l4.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/resources/menu/down/l5.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/resources/menu/l1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/resources/menu/l2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/resources/menu/l3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/resources/menu/l4.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/resources/menu/l5.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/resources/data/score.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/resources/menu/down/replay.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/resources/menu/replay.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/zetcode/panel/MainUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/zetcode/panel/MainUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/zetcode/frame/PanelChange.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/zetcode/frame/PanelChange.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/zetcode/panel/Board.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/zetcode/panel/Board.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/zetcode/panel/MenuUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/zetcode/panel/MenuUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/menu/menuBack.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/menu/menuBack.png" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -83,6 +71,7 @@
       <recent name="C:\Users\garbi\IdeaProjects\Java-Sokoban-Game\src\resources" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\garbi\IdeaProjects\Java-Sokoban-Game\src\resources\menu\down" />
       <recent name="C:\Users\garbi\IdeaProjects\Java-Sokoban-Game\src\resources\main" />
       <recent name="C:\Users\garbi\IdeaProjects\Java-Sokoban-Game\src\resources\menu" />
       <recent name="C:\Users\garbi\IdeaProjects\Java-Sokoban-Game\src\resources" />
@@ -174,26 +163,26 @@
     </state>
     <state x="549" y="127" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1600493172155" />
     <state x="915" y="222" key="FileChooserDialogImpl/0.0.2560.1440/-1920.349.1920.1080@0.0.2560.1440" timestamp="1602455400863" />
-    <state width="2517" height="119" key="GridCell.Tab.0.bottom" timestamp="1602470167137">
+    <state width="1860" height="119" key="GridCell.Tab.0.bottom" timestamp="1602476736305">
       <screen x="0" y="0" width="2560" height="1440" />
     </state>
     <state width="1230" height="195" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1602443474946" />
-    <state width="2517" height="119" key="GridCell.Tab.0.bottom/0.0.2560.1440/-1920.349.1920.1080@0.0.2560.1440" timestamp="1602470167137" />
-    <state width="2517" height="119" key="GridCell.Tab.0.center" timestamp="1602470167136">
+    <state width="1860" height="119" key="GridCell.Tab.0.bottom/0.0.2560.1440/-1920.349.1920.1080@0.0.2560.1440" timestamp="1602476736305" />
+    <state width="1860" height="119" key="GridCell.Tab.0.center" timestamp="1602476736305">
       <screen x="0" y="0" width="2560" height="1440" />
     </state>
     <state width="1230" height="195" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1602443474946" />
-    <state width="2517" height="119" key="GridCell.Tab.0.center/0.0.2560.1440/-1920.349.1920.1080@0.0.2560.1440" timestamp="1602470167136" />
-    <state width="2517" height="119" key="GridCell.Tab.0.left" timestamp="1602470167136">
+    <state width="1860" height="119" key="GridCell.Tab.0.center/0.0.2560.1440/-1920.349.1920.1080@0.0.2560.1440" timestamp="1602476736305" />
+    <state width="1860" height="119" key="GridCell.Tab.0.left" timestamp="1602476736305">
       <screen x="0" y="0" width="2560" height="1440" />
     </state>
     <state width="1230" height="195" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1602443474946" />
-    <state width="2517" height="119" key="GridCell.Tab.0.left/0.0.2560.1440/-1920.349.1920.1080@0.0.2560.1440" timestamp="1602470167136" />
-    <state width="2517" height="119" key="GridCell.Tab.0.right" timestamp="1602470167137">
+    <state width="1860" height="119" key="GridCell.Tab.0.left/0.0.2560.1440/-1920.349.1920.1080@0.0.2560.1440" timestamp="1602476736305" />
+    <state width="1860" height="119" key="GridCell.Tab.0.right" timestamp="1602476736305">
       <screen x="0" y="0" width="2560" height="1440" />
     </state>
     <state width="1230" height="195" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1602443474946" />
-    <state width="2517" height="119" key="GridCell.Tab.0.right/0.0.2560.1440/-1920.349.1920.1080@0.0.2560.1440" timestamp="1602470167137" />
+    <state width="1860" height="119" key="GridCell.Tab.0.right/0.0.2560.1440/-1920.349.1920.1080@0.0.2560.1440" timestamp="1602476736305" />
     <state width="2517" height="154" key="GridCell.Tab.1.bottom" timestamp="1602469987181">
       <screen x="0" y="0" width="2560" height="1440" />
     </state>

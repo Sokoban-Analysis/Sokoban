@@ -7,6 +7,8 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
+import static com.zetcode.var.StaticVar.*;
+
 public class MenuUI extends JPanel implements ActionListener {
     private PanelChange change;
     private ImageIcon backImg = new ImageIcon("src/resources/menu/menuBack.png");
@@ -31,16 +33,18 @@ public class MenuUI extends JPanel implements ActionListener {
             "src/resources/menu/continue.png",
             "src/resources/menu/1p.png",
             "src/resources/menu/2p.png",
+            "src/resources/menu/replay.png",
     };
     private final String[] modButtonPathDown
             ={
             "src/resources/menu/down/continue.png",
             "src/resources/menu/down/1p.png",
             "src/resources/menu/down/2p.png",
+            "src/resources/menu/down/replay.png",
     };
 
     private MakeButton[] levelButton = new MakeButton[5];
-    private MakeButton[] modButton = new MakeButton[3];
+    private MakeButton[] modButton = new MakeButton[4];
 
     public MenuUI(PanelChange change) {
         setLayout(null);
@@ -60,14 +64,36 @@ public class MenuUI extends JPanel implements ActionListener {
         modButton[0] = new MakeButton(this,modButtonPath[0], modButtonPathDown[0]);
         modButton[0].setup(769, 277,348,108, this::actionPerformed);
         modButton[1] = new MakeButton(this,modButtonPath[1], modButtonPathDown[1]);
-        modButton[1].setup(769, 399,348,108, this::actionPerformed);
+        modButton[1].setup(769, 377,348,108, this::actionPerformed);
         modButton[2] = new MakeButton(this,modButtonPath[2], modButtonPathDown[2]);
-        modButton[2].setup(769, 511,348,108, this::actionPerformed);
+        modButton[2].setup(769, 477,348,108, this::actionPerformed);
+        modButton[3] = new MakeButton(this,modButtonPath[3], modButtonPathDown[3]);
+        modButton[3].setup(769, 577,348,108, this::actionPerformed);
+
+/*        JLabel score = new JLabel();
+        score.setText("100000");
+        Font font = new Font("Power Pixel-7", Font.BOLD);*/
     }
 
     @Override
     public void actionPerformed(ActionEvent e) {
         // TODO Auto-generated method stub
+        if(e.getSource()==levelButton[0].getButton()){
+            change.initBoard(level1);
+            change.changePanel();
+        }else if(e.getSource()==levelButton[1].getButton()){
+            change.initBoard(level2);
+            change.changePanel();
+        }else if(e.getSource()==levelButton[2].getButton()){
+            change.initBoard(level3);
+            change.changePanel();
+        }else if(e.getSource()==levelButton[3].getButton()){
+            change.initBoard(level4);
+            change.changePanel();
+        }else if(e.getSource()==levelButton[4].getButton()){
+            change.initBoard(level5);
+            change.changePanel();
+        }
     }
 
     @Override

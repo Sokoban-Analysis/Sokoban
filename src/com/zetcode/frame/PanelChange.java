@@ -29,8 +29,8 @@ public class PanelChange extends JFrame {
     }
 
 
-    public void initBoard(){
-        board = new Board(level1);
+    public void initBoard(String level){
+        board = new Board(level);
         getContentPane().add("board",board);
         getContentPane().addKeyListener(new BoardKeyListner(board));
         getContentPane().setFocusable(true);

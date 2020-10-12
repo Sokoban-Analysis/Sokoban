@@ -156,203 +156,130 @@ public class Board extends JPanel implements ActionListener {
     }
 
     public boolean checkWallCollision(Actor actor, int type) {
-
         switch (type) {
-            
             case LEFT_COLLISION:
-                
                 for (int i = 0; i < walls.size(); i++) {
-                    
                     Wall wall = walls.get(i);
-                    
                     if (actor.isLeftCollision(wall)) {
-                        
                         return true;
                     }
                 }
-                
                 return false;
-                
             case RIGHT_COLLISION:
-                
                 for (int i = 0; i < walls.size(); i++) {
-                    
                     Wall wall = walls.get(i);
-                    
                     if (actor.isRightCollision(wall)) {
                         return true;
                     }
                 }
-                
                 return false;
-                
             case TOP_COLLISION:
-                
                 for (int i = 0; i < walls.size(); i++) {
-                    
                     Wall wall = walls.get(i);
-                    
                     if (actor.isTopCollision(wall)) {
-                        
                         return true;
                     }
                 }
-                
                 return false;
-                
             case BOTTOM_COLLISION:
-                
                 for (int i = 0; i < walls.size(); i++) {
-                    
                     Wall wall = walls.get(i);
-                    
                     if (actor.isBottomCollision(wall)) {
-                        
                         return true;
                     }
                 }
-                
                 return false;
-                
             default:
                 break;
         }
-        
         return false;
     }
 
     public boolean checkBagCollision(int type) {
-
         switch (type) {
-            
             case LEFT_COLLISION:
-                
                 for (int i = 0; i < baggs.size(); i++) {
-
                     Baggage bag = baggs.get(i);
-
                     if (soko.isLeftCollision(bag)) {
-
                         for (int j = 0; j < baggs.size(); j++) {
-                            
                             Baggage item = baggs.get(j);
-                            
                             if (!bag.equals(item)) {
-                                
                                 if (bag.isLeftCollision(item)) {
                                     return true;
                                 }
                             }
-                            
                             if (checkWallCollision(bag, LEFT_COLLISION)) {
                                 return true;
                             }
                         }
-                        
                         bag.move(-SPACE, 0);
                         isCompleted();
                     }
                 }
-                
                 return false;
-                
             case RIGHT_COLLISION:
-                
                 for (int i = 0; i < baggs.size(); i++) {
-
                     Baggage bag = baggs.get(i);
-                    
                     if (soko.isRightCollision(bag)) {
-                        
                         for (int j = 0; j < baggs.size(); j++) {
-
                             Baggage item = baggs.get(j);
-                            
                             if (!bag.equals(item)) {
-                                
                                 if (bag.isRightCollision(item)) {
                                     return true;
                                 }
                             }
-                            
                             if (checkWallCollision(bag, RIGHT_COLLISION)) {
                                 return true;
                             }
                         }
-                        
                         bag.move(SPACE, 0);
                         isCompleted();
                     }
                 }
                 return false;
-                
             case TOP_COLLISION:
-                
                 for (int i = 0; i < baggs.size(); i++) {
-
                     Baggage bag = baggs.get(i);
-                    
                     if (soko.isTopCollision(bag)) {
-                        
                         for (int j = 0; j < baggs.size(); j++) {
-
                             Baggage item = baggs.get(j);
-
                             if (!bag.equals(item)) {
-                                
                                 if (bag.isTopCollision(item)) {
                                     return true;
                                 }
                             }
-                            
                             if (checkWallCollision(bag, TOP_COLLISION)) {
                                 return true;
                             }
                         }
-                        
                         bag.move(0, -SPACE);
                         isCompleted();
                     }
                 }
-
                 return false;
-                
             case BOTTOM_COLLISION:
-                
                 for (int i = 0; i < baggs.size(); i++) {
-
                     Baggage bag = baggs.get(i);
-                    
                     if (soko.isBottomCollision(bag)) {
-                        
                         for (int j = 0; j < baggs.size(); j++) {
-
                             Baggage item = baggs.get(j);
-                            
                             if (!bag.equals(item)) {
-                                
                                 if (bag.isBottomCollision(item)) {
                                     return true;
                                 }
                             }
-                            
                             if (checkWallCollision(bag,BOTTOM_COLLISION)) {
-                                
                                 return true;
                             }
                         }
-                        
                         bag.move(0, SPACE);
                         isCompleted();
                     }
                 }
-                
                 break;
-                
             default:
                 break;
         }
-
         return false;
     }
 
@@ -360,17 +287,11 @@ public class Board extends JPanel implements ActionListener {
         int nOfBags = baggs.size();
         int finishedBags = 0;//다 옮긴 짐 개수
         int n = 10;//시간 제한
-
         for (int i = 0; i < nOfBags; i++) {
-            
             Baggage bag = baggs.get(i);
-            
             for (int j = 0; j < nOfBags; j++) {
-                
                 Area area =  areas.get(j);
-                
                 if (bag.x() == area.x() && bag.y() == area.y()) {//짐이 area 좌표의 위치와 같으면(잘 놨으면)
-                    
                     finishedBags += 1;
                 }
             }
