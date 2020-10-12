@@ -10,29 +10,21 @@ import java.awt.event.ActionListener;
 public class MainUI extends JPanel implements ActionListener {
     private PanelChange change;
     private ImageIcon backImg = new ImageIcon("src/resources/main/mainBack.png");
-    private ImageIcon playButtonImg = new ImageIcon("src/resources/main/playButton.png");
-    private ImageIcon playButtonImgDown = new ImageIcon("src/resources/main/playButtonDown.png");
-    private JButton playButton;
+    private String playButtonPath = "src/resources/main/playButton.png";
+    private String playButtonDownPath = "src/resources/main/playButtonDown.png";
+    private MakeButton playbutton;
 
     public MainUI(PanelChange change) {
         setLayout(null);
         this.change = change;
-        playButton = new JButton(playButtonImg);
-        playButton.setBounds(500,432,298,128);
-        playButton.setRolloverIcon(playButtonImgDown);
-        playButton.setPressedIcon(playButtonImgDown);
-        playButton.setBackground(Color.red);
-        playButton.setBorderPainted(false);
-        playButton.setFocusPainted(false);
-        playButton.setContentAreaFilled(false);
-        playButton.addActionListener(this);
-        add(playButton);
+        playbutton = new MakeButton(this, playButtonPath, playButtonDownPath);
+        playbutton.setup(500,432,298,128, this::actionPerformed);
     }
 
     @Override
     public void actionPerformed(ActionEvent e) {
         // TODO Auto-generated method stub
-        if(e.getSource()==playButton){
+        if(e.getSource()==playbutton.getButton()){
             change.initMenuUI();
             change.changePanel();
         }
