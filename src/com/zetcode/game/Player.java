@@ -12,7 +12,7 @@ public class Player extends Actor {
     }
 
     private void initPlayer() {
-        ImageIcon iicon = new ImageIcon("src/resources/sokoban.png");
+        ImageIcon iicon = new ImageIcon(getClass().getClassLoader().getResource("resources/sokoban.png"));
         Image image = iicon.getImage();
         setImage(image);
     }

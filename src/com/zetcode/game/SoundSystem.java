@@ -3,21 +3,24 @@ package com.zetcode.game;
 import javax.sound.sampled.AudioInputStream;
 import javax.sound.sampled.AudioSystem;
 import javax.sound.sampled.Clip;
+import java.io.BufferedInputStream;
 import java.io.File;
+import java.io.InputStream;
 
 public class SoundSystem {
     private Clip clip;
     private AudioInputStream stream;
-    private File file;
+    private String filename;
+    private InputStream bufferedIn;
 
-    public SoundSystem(File file){
-        this.file = file;
+    public SoundSystem(String filename){
+        this.filename = filename;
         InitSound();
     }
 
     private void InitSound(){
         try {
-            stream = AudioSystem.getAudioInputStream(file);
+            stream = AudioSystem.getAudioInputStream(getClass().getResource(filename));
             clip = AudioSystem.getClip();
             clip.open(stream);
         } catch (Exception e) {

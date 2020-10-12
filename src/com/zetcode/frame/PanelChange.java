@@ -8,6 +8,13 @@ import com.zetcode.panel.MenuUI;
 
 import javax.swing.*;
 import java.awt.*;
+import java.io.File;
+import java.io.IOException;
+import java.net.URISyntaxException;
+import java.net.URL;
+import java.util.Enumeration;
+import java.util.jar.JarEntry;
+import java.util.jar.JarFile;
 
 import static com.zetcode.var.StaticVar.*;
 
@@ -16,11 +23,8 @@ public class PanelChange extends JFrame {
     public MainUI mainUi = null;
     public MenuUI menuUI = null;
     private CardLayout cards = new CardLayout();
-    private JButton button1;
-    private JPanel panel1;
 
-
-    public PanelChange(){
+    public PanelChange() {
         /*        setUndecorated(true); 프레임 없애기*/
         setSize(1280, 755);
         getContentPane().setLayout(cards);
@@ -29,12 +33,9 @@ public class PanelChange extends JFrame {
         initMainUI();
     }
 
-
-
-
     public void initBoard(String level, int timeto){
         StopBoard();
-        board = new Board(level, this,timeto);
+        board = new Board(level, this ,timeto);
         board.setLayout(new BorderLayout());
         board.add(new BoardUI(board), BorderLayout.CENTER);
         getContentPane().add("board", board);
@@ -46,11 +47,9 @@ public class PanelChange extends JFrame {
 
     public void StopBoard(){
         if(getContentPane().getComponents().length > 2){
-            board.StopBoard();
             getContentPane().remove(2);
         }
     }
-
 
     public void initMainUI(){
         mainUi = new MainUI(this);

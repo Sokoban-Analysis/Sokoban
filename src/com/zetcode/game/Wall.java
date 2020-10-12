@@ -12,9 +12,10 @@ public class Wall extends Actor {
         
         initWall();
     }
+
     
     private void initWall() {
-        ImageIcon iicon = new ImageIcon("src/resources/wall.png");
+        ImageIcon iicon = new ImageIcon(getClass().getClassLoader().getResource("resources/wall.png"));
         image = iicon.getImage();
         setImage(image);
     }

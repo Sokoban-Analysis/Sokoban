@@ -3,6 +3,7 @@ package com.zetcode.tool;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionListener;
+import java.net.URL;
 
 public class MakeButton {
 
@@ -10,7 +11,7 @@ public class MakeButton {
     private JButton button;
     private ImageIcon buttonImg;
     private ImageIcon buttonImgDown;
-    public MakeButton(JPanel panel, String path1, String path2){
+    public MakeButton(JPanel panel, URL path1, URL path2){
         this.panel = panel;
         buttonImg = new ImageIcon(path1);
         buttonImgDown = new ImageIcon(path2);
@@ -27,6 +28,7 @@ public class MakeButton {
         button.addActionListener(listener);
         panel.add(button);
     }
+
     public JButton getButton(){
         return  this.button;
     }

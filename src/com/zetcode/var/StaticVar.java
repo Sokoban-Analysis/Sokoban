@@ -1,7 +1,9 @@
 package com.zetcode.var;
 
+import com.zetcode.frame.PanelChange;
 import com.zetcode.game.Player;
 
+import java.net.URL;
 import java.util.concurrent.Executors;
 import java.util.concurrent.ScheduledExecutorService;
 
@@ -20,6 +22,10 @@ public class StaticVar {
     public static final int RUNNABLE = 1;
     public static final int SUCCESS = 2;
     public static final int FAILED = 0;
+    public static final int OnePLAYER = 1;
+    public static final int TwoPLAYER = 2;
+    public static int modStatue = OnePLAYER;
+    public static PanelChange panelChange = new PanelChange();
 
     public static String level1
             ="####### \n" +

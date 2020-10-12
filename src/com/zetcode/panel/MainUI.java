@@ -7,12 +7,13 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.net.URL;
 
 public class MainUI extends JPanel implements ActionListener {
     private PanelChange change;
-    private ImageIcon backImg = new ImageIcon("src/resources/main/mainBack.png");
-    private String playButtonPath = "src/resources/main/playButton.png";
-    private String playButtonDownPath = "src/resources/main/playButtonDown.png";
+    private ImageIcon backImg = new ImageIcon(getClass().getClassLoader().getResource("resources/main/mainBack.png"));
+    private URL playButtonPath = getClass().getClassLoader().getResource("resources/main/playButton.png");
+    private URL playButtonDownPath = getClass().getClassLoader().getResource("resources/main/playButtonDown.png");
     private MakeButton playbutton;
 
     public MainUI(PanelChange change) {

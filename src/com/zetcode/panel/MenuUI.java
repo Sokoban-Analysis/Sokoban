@@ -10,6 +10,7 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.*;
+import java.net.URL;
 import java.util.concurrent.Executors;
 import java.util.concurrent.ScheduledExecutorService;
 import java.util.concurrent.TimeUnit;
@@ -19,45 +20,56 @@ import static com.zetcode.var.StaticVar.*;
 public class MenuUI extends JPanel implements ActionListener {
     private PanelChange change;
     private MakeLabel makeLabel;
-    private ImageIcon backImg = new ImageIcon("src/resources/menu/menuBack.png");
-    private final String[] levelButtonPath
+    private ImageIcon backImg = new ImageIcon(getClass().getClassLoader().getResource("resources/menu/menuBack.png"));
+    private final URL[] levelButtonPath
             ={
-            "src/resources/menu/l1.png",
-            "src/resources/menu/l2.png",
-            "src/resources/menu/l3.png",
-            "src/resources/menu/l4.png",
-            "src/resources/menu/l5.png",
+            getResource("resources/menu/l1.png"),
+            getResource("resources/menu/l2.png"),
+            getResource("resources/menu/l3.png"),
+            getResource("resources/menu/l4.png"),
+            getResource("resources/menu/l4.png")
             };
-    private final String[] levelButtonPathDown
+    private final URL[] levelButtonPathDown
             ={
-            "src/resources/menu/down/l1.png",
-            "src/resources/menu/down/l2.png",
-            "src/resources/menu/down/l3.png",
-            "src/resources/menu/down/l4.png",
-            "src/resources/menu/down/l5.png",
+            getResource("resources/menu/down/l1.png"),
+            getResource("resources/menu/down/l2.png"),
+            getResource("resources/menu/down/l3.png"),
+            getResource("resources/menu/down/l4.png"),
+            getResource("resources/menu/down/l5.png")
+            };
+    private final URL[] modButtonPath
+            ={
+            getResource("resources/menu/continue.png"),
+            getResource("resources/menu/1p.png"),
+            getResource("resources/menu/2p.png"),
+            getResource("resources/menu/replay.png")
     };
-    private final String[] modButtonPath
+    private final URL[] modButtonPathDown
             ={
-            "src/resources/menu/continue.png",
-            "src/resources/menu/1p.png",
-            "src/resources/menu/2p.png",
-            "src/resources/menu/replay.png",
+            getResource("resources/menu/down/continue.png"),
+            getResource("resources/menu/down/1p.png"),
+            getResource("resources/menu/down/2p.png"),
+            getResource("resources/menu/down/replay.png")
     };
-    private final String[] modButtonPathDown
+
+    private final URL[] modButtonPathPlayyer
             ={
-            "src/resources/menu/down/continue.png",
-            "src/resources/menu/down/1p.png",
-            "src/resources/menu/down/2p.png",
-            "src/resources/menu/down/replay.png",
+            getResource("resources/menu/1pc.png"),
+            getResource("resources/menu/2pc.png")
     };
 
     private MakeButton[] levelButton = new MakeButton[5];
     private MakeButton[] modButton = new MakeButton[4];
 
+    private URL getResource(String path){
+        return getClass().getClassLoader().getResource(path);
+    }
+
+
     public MenuUI(PanelChange change) {
         setLayout(null);
         this.change = change;
-        System.out.println(levelButtonPath[0]);
+        modStatue = OnePLAYER;
         levelButton[0] = new MakeButton(this,levelButtonPath[0], levelButtonPathDown[0]);
         levelButton[0].setup(80, 277,288,108, this::actionPerformed);
         levelButton[1] = new MakeButton(this,levelButtonPath[1], levelButtonPathDown[1]);
@@ -80,6 +92,17 @@ public class MenuUI extends JPanel implements ActionListener {
 
         makeLabel = new MakeLabel(802, 167, 300,65, 60f);
         makeLabel.add(this);
+        SetUpMod();
+    }
+
+    public void SetUpMod(){
+        if(modStatue == OnePLAYER){
+            modButton[1].getButton().setIcon(new ImageIcon(modButtonPathPlayyer[0]));
+            modButton[2].getButton().setIcon(new ImageIcon(modButtonPath[2]));
+        }else{
+            modButton[2].getButton().setIcon(new ImageIcon(modButtonPathPlayyer[1]));
+            modButton[1].getButton().setIcon(new ImageIcon(modButtonPath[1]));
+        }
     }
 
 
@@ -87,35 +110,41 @@ public class MenuUI extends JPanel implements ActionListener {
     public void actionPerformed(ActionEvent e) {
         // TODO Auto-generated method stub
         if(e.getSource()==levelButton[0].getButton()){
-            change.initBoard(level1, 10);
+            change.initBoard(level5, 10);
             change.changePanel();
         }else if(e.getSource()==levelButton[1].getButton()){
             change.initBoard(level2, 10);
             change.changePanel();
         }else if(e.getSource()==levelButton[2].getButton()){
-            change.initBoard(level3, 10);
+            change.initBoard(level3, 30);
             change.changePanel();
         }else if(e.getSource()==levelButton[3].getButton()){
-            change.initBoard(level4, 10);
+            change.initBoard(level4, 40);
             change.changePanel();
         }else if(e.getSource()==levelButton[4].getButton()){
-            change.initBoard(level5, 10);
+            change.initBoard(level5, 50);
             change.changePanel();
+        }else if(e.getSource()==modButton[1].getButton()){
+            modStatue = OnePLAYER;
+            SetUpMod();
+        }else if(e.getSource()==modButton[2].getButton()){
+            modStatue = TwoPLAYER;
+            SetUpMod();
         }
     }
+
 
     @Override
     public void paintComponent(Graphics g) {
         super.paintComponent(g);
         g.drawImage(backImg.getImage(), 0,0, 1280,720,null);
-        File file = new File("src/resources/data/score.txt");
         String scoreStr = "";
+        File file = new File("src/resources/data/score.txt");
         try{
-            FileReader file_reader = new FileReader(file);
-            BufferedReader br = new BufferedReader(file_reader);
-            scoreStr = br.readLine();
-        }catch (Exception e){}
+            FileReader ir = new FileReader(file);
+            BufferedReader  reader = new BufferedReader(ir);
+            scoreStr = reader.readLine();
+        }catch(Exception e){}
         makeLabel.setText(scoreStr);
     }
-
 }
