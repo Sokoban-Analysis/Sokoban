@@ -27,7 +27,7 @@ public class MenuUI extends JPanel implements ActionListener {
             getResource("resources/menu/l2.png"),
             getResource("resources/menu/l3.png"),
             getResource("resources/menu/l4.png"),
-            getResource("resources/menu/l4.png")
+            getResource("resources/menu/l5.png")
             };
     private final URL[] levelButtonPathDown
             ={
@@ -110,7 +110,7 @@ public class MenuUI extends JPanel implements ActionListener {
     public void actionPerformed(ActionEvent e) {
         // TODO Auto-generated method stub
         if(e.getSource()==levelButton[0].getButton()){
-            change.initBoard(level5, 10);
+            change.initBoard(level1, 10);
             change.changePanel();
         }else if(e.getSource()==levelButton[1].getButton()){
             change.initBoard(level2, 10);

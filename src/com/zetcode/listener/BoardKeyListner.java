@@ -36,7 +36,7 @@ public class BoardKeyListner extends KeyAdapter{
                     System.out.println("레프트 월");
                     return;
                 }
-                if (board.checkBagCollision(LEFT_COLLISION, this.player1)) {
+                if (board.checkBagCollision(soko[0], LEFT_COLLISION, this.player1)) {
                     System.out.println("레프트 백");
                     return;
                 }
@@ -47,7 +47,7 @@ public class BoardKeyListner extends KeyAdapter{
                     System.out.println("레프트 월");
                     return;
                 }
-                if (board.checkBagCollision(RIGHT_COLLISION, this.player1)) {
+                if (board.checkBagCollision(soko[0], RIGHT_COLLISION, this.player1)) {
                     System.out.println("라이트 백");
                     return;
                 }
@@ -58,7 +58,7 @@ public class BoardKeyListner extends KeyAdapter{
                     System.out.println("탑 월");
                     return;
                 }
-                if (board.checkBagCollision(TOP_COLLISION, this.player1)) {
+                if (board.checkBagCollision(soko[0], TOP_COLLISION, this.player1)) {
                     System.out.println("탑 백");
                     return;
                 }
@@ -69,11 +69,50 @@ public class BoardKeyListner extends KeyAdapter{
                     System.out.println("다운 월");
                     return;
                 }
-                if (board.checkBagCollision(BOTTOM_COLLISION, this.player1)) {
-                    System.out.println("다운 백");
+                if (board.checkBagCollision(soko[0], BOTTOM_COLLISION, this.player1)) {
                     return;
                 }
                 soko[0].move(0, SPACE);
+                break;
+            case KeyEvent.VK_A:
+                if (modStatue != TwoPLAYER) return;
+                if (board.checkWallCollision(soko[1], LEFT_COLLISION, this.player2)) {
+                    return;
+                }
+                if (board.checkBagCollision(soko[1],LEFT_COLLISION, this.player2)) {
+                    return;
+                }
+                soko[1].move(-SPACE, 0);
+                break;
+            case KeyEvent.VK_D:
+                if (modStatue != TwoPLAYER) return;
+                if (board.checkWallCollision(soko[1], RIGHT_COLLISION, this.player2)) {
+                    return;
+                }
+                if (board.checkBagCollision(soko[1],RIGHT_COLLISION, this.player2)) {
+                    return;
+                }
+                soko[1].move(SPACE, 0);
+                break;
+            case KeyEvent.VK_W:
+                if (modStatue != TwoPLAYER) return;
+                if (board.checkWallCollision(soko[1], TOP_COLLISION, this.player2)) {
+                    return;
+                }
+                if (board.checkBagCollision(soko[1],TOP_COLLISION, this.player2)) {
+                    return;
+                }
+                soko[1].move(0, -SPACE);
+                break;
+            case KeyEvent.VK_S:
+                if (modStatue != TwoPLAYER) return;
+                if (board.checkWallCollision(soko[1], BOTTOM_COLLISION, this.player2)) {
+                    return;
+                }
+                if (board.checkBagCollision(soko[1],BOTTOM_COLLISION, this.player2)) {
+                    return;
+                }
+                soko[1].move(0, SPACE);
                 break;
             case KeyEvent.VK_R:
                 board.restartLevel();

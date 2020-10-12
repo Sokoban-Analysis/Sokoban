@@ -23,6 +23,7 @@ public class BoardUI extends JPanel implements ActionListener {
     private Board board;
     private MakeLabel timeLabel;
     private MakeLabel scoreLabel;
+    private MakeLabel winnderLabel;
     private URL backButtonpath = getResource("resources/board/back.png");
     private URL backButtonDownpath = getResource("resources/board/down/back.png");
     private URL menuButtonpath = getResource("resources/board/menu.png");
@@ -51,7 +52,7 @@ public class BoardUI extends JPanel implements ActionListener {
     private void initLabel(){
         timeLabel = new MakeLabel(330, 89, 200, 70, 60f);
         timeLabel.add(this);
-        scoreLabel = new MakeLabel(760, 89, 300, 70, 60f);
+        scoreLabel = new MakeLabel(720, 89, 300, 70, 60f);
         scoreLabel.add(this);
         soundBG = new SoundSystem("/resources/background.wav");
         soundBG.play();
@@ -133,9 +134,19 @@ public class BoardUI extends JPanel implements ActionListener {
                     repaint();
                     scoreTimer.shutdown();
                 }else if(board.finishedBags == board.nOfBags) {
-                    board.isCompleted = true;
-                    try {//게임 성공하면 효과음
+                    if(modStatue == TwoPLAYER){
+                        for(int key : board.twoBags.keySet()){
+                            if(board.twoBags.get(key) == board.finishedBags){
+                                winnderLabel = new MakeLabel(450, 212, 400, 70, 60f);
+                                winnderLabel.setText("PLAYER " + key);
+                                winnderLabel.add(panel);
+                            }
+                        }
+                    }else{
                         setScore();
+                    }
+                    try {//게임 성공하면 효과음
+                        board.isCompleted = true;
                         soundBG.stop();
                         resultSound = new SoundSystem("/resources/success.wav");
                         resultSound.play();

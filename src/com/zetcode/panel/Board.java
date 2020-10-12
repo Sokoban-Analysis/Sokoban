@@ -5,6 +5,7 @@ import com.zetcode.game.*;
 import com.zetcode.listener.BoardKeyListner;
 import com.zetcode.tool.MakeLabel;
 
+
 import java.awt.*;
 import java.awt.event.*;
 import java.io.*;
@@ -25,6 +26,7 @@ public class Board extends JPanel{
     private Map<Integer,ArrayList<Area>> areas = new HashMap<>();
     private int player;
     public int finishedBags = 0;
+    public Map<Integer, Integer> twoBags = new HashMap<>();
     public int nOfBags;
 
     private String level;
@@ -49,7 +51,7 @@ public class Board extends JPanel{
         }else{
             setOffsetPosition();
             initWorld();
-            nOfBags = baggs.size();
+            nOfBags = baggs.get(player).size();
         }
     }
 
@@ -97,10 +99,10 @@ public class Board extends JPanel{
         areas.put(player, new ArrayList<>());
 
         int x = 640 - Xoffset;
-        if(player == OnePLAYER){
+        if(player == TwoPLAYER){
             x = 640 - 2*Xoffset - SPACE;
             System.out.println("one : " + x);
-        }else if(player == TwoPLAYER){
+        }else if(player == OnePLAYER){
             x = 640 + SPACE;
             System.out.println("two : " + x);
         }
@@ -116,10 +118,10 @@ public class Board extends JPanel{
                 case '\n':
                     y += SPACE;
                     x = 640 - Xoffset;
-                    if(player == OnePLAYER){
+                    if(player == TwoPLAYER){
                         x = 640 - 2*Xoffset - SPACE;
                         System.out.println("one : " + x);
-                    }else if(player == TwoPLAYER){
+                    }else if(player == OnePLAYER){
                         x = 640 + SPACE;
                         System.out.println("two : " + x);
                     }
@@ -164,11 +166,7 @@ public class Board extends JPanel{
         world.addAll(walls.get(player));
         world.addAll(areas.get(player));
         world.addAll(baggs.get(player));
-        if(player == TwoPLAYER){
-            world.add(soko[1]);
-        }else{
-            world.add(soko[0]);
-        }
+        world.add(soko[0]);
 
         for (int i = 0; i < world.size(); i++) {
             Actor item = world.get(i);//Actor의 item 객체에 Actor 배열인 world를 채움
@@ -189,11 +187,7 @@ public class Board extends JPanel{
             world.addAll(walls.get(i));
             world.addAll(areas.get(i));
             world.addAll(baggs.get(i));
-            if(i == TwoPLAYER){
-                world.add(soko[1]);
-            }else{
-                world.add(soko[0]);
-            }
+            world.add(soko[i - 1]);
             for (int j = 0; j < world.size(); j++) {
                 Actor item = world.get(j);//Actor의 item 객체에 Actor 배열인 world를 채움
                 if (item instanceof Player || item instanceof Baggage) {//item이 Player를 참조하는지 true/false 반환
@@ -258,13 +252,13 @@ public class Board extends JPanel{
         return false;
     }
 
-    public boolean checkBagCollision(int type, int player) {
+    public boolean checkBagCollision(Actor soko, int type, int player) {
         score[0] += 50;
         switch (type) {
             case LEFT_COLLISION:
                 for (int i = 0; i < baggs.get(player).size(); i++) {
                     Baggage bag = baggs.get(player).get(i);
-                    if (soko[0].isLeftCollision(bag)) {
+                    if (soko.isLeftCollision(bag)) {
                         for (int j = 0; j < baggs.get(player).size(); j++) {
                             Baggage item = baggs.get(player).get(j);
                             if (!bag.equals(item)) {
@@ -277,14 +271,14 @@ public class Board extends JPanel{
                             }
                         }
                         bag.move(-SPACE, 0);
-                        isCompleted();
+                        isCompleted(player);
                     }
                 }
                 return false;
             case RIGHT_COLLISION:
                 for (int i = 0; i < baggs.get(player).size(); i++) {
                     Baggage bag = baggs.get(player).get(i);
-                    if (soko[0].isRightCollision(bag)) {
+                    if (soko.isRightCollision(bag)) {
                         for (int j = 0; j < baggs.get(player).size(); j++) {
                             Baggage item = baggs.get(player).get(j);
                             if (!bag.equals(item)) {
@@ -297,14 +291,14 @@ public class Board extends JPanel{
                             }
                         }
                         bag.move(SPACE, 0);
-                        isCompleted();
+                        isCompleted(player);
                     }
                 }
                 return false;
             case TOP_COLLISION:
-                for (int i = 0; i < baggs.size(); i++) {
+                for (int i = 0; i < baggs.get(player).size(); i++) {
                     Baggage bag = baggs.get(player).get(i);
-                    if (soko[0].isTopCollision(bag)) {
+                    if (soko.isTopCollision(bag)) {
                         for (int j = 0; j < baggs.get(player).size(); j++) {
                             Baggage item = baggs.get(player).get(j);
                             if (!bag.equals(item)) {
@@ -317,15 +311,15 @@ public class Board extends JPanel{
                             }
                         }
                         bag.move(0, -SPACE);
-                        isCompleted();
+                        isCompleted(player);
                     }
                 }
                 return false;
             case BOTTOM_COLLISION:
-                for (int i = 0; i < baggs.size(); i++) {
+                for (int i = 0; i < baggs.get(player).size(); i++) {
                     Baggage bag = baggs.get(player).get(i);
-                    if (soko[0].isBottomCollision(bag)) {
-                        for (int j = 0; j < baggs.size(); j++) {
+                    if (soko.isBottomCollision(bag)) {
+                        for (int j = 0; j < baggs.get(player).size(); j++) {
                             Baggage item = baggs.get(player).get(j);
                             if (!bag.equals(item)) {
                                 if (bag.isBottomCollision(item)) {
@@ -337,7 +331,7 @@ public class Board extends JPanel{
                             }
                         }
                         bag.move(0, SPACE);
-                        isCompleted();
+                        isCompleted(player);
                     }
                 }
                 break;
@@ -346,15 +340,17 @@ public class Board extends JPanel{
         }
         return false;
     }
-    public void isCompleted() {//게임 끝
-        nOfBags = baggs.size();
+    public void isCompleted(int player) {//게임 끝
+        nOfBags = baggs.get(player).size();
         finishedBags = 0;
+        twoBags.put(player, 0);
         for (int i = 0; i < nOfBags; i++) {
             Baggage bag = baggs.get(player).get(i);
             for (int j = 0; j < nOfBags; j++) {
                 Area area =  areas.get(player).get(j);
                 if (bag.x() == area.x() && bag.y() == area.y()) {//짐이 area 좌표의 위치와 같으면(잘 놨으면)
                     finishedBags += 1;
+                    twoBags.put(player, finishedBags);
                     score[0] += 1000;
                 }
             }
@@ -371,7 +367,7 @@ public class Board extends JPanel{
         }else{
             setOffsetPosition();
             initWorld();
-            nOfBags = baggs.size();
+            nOfBags = baggs.get(player).size();
         }
         if (isCompleted) {
             isCompleted = false;

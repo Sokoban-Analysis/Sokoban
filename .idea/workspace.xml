@@ -25,31 +25,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cdbf11fd-8829-45d4-95d5-fae79ca40161" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/artifacts/Java_Sokoban_Game_jar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/META-INF/MANIFEST.MF" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/resources/board/transBack.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/resources/main/soundMain.wav" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/resources/menu/1pc.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/resources/menu/2pc.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Java-Sokoban-Game/com/zetcode/Sokoban.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Java-Sokoban-Game/com/zetcode/Sokoban.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/zetcode/Sokoban.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/zetcode/Sokoban.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/zetcode/frame/PanelChange.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/zetcode/frame/PanelChange.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/zetcode/game/Area.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/zetcode/game/Area.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/zetcode/game/Baggage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/zetcode/game/Baggage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/zetcode/game/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/zetcode/game/Player.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/zetcode/game/SoundSystem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/zetcode/game/SoundSystem.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/zetcode/game/Wall.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/zetcode/game/Wall.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/zetcode/listener/BoardKeyListner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/zetcode/listener/BoardKeyListner.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/zetcode/panel/Board.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/zetcode/panel/Board.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/zetcode/panel/BoardUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/zetcode/panel/BoardUI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/zetcode/panel/MainUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/zetcode/panel/MainUI.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/zetcode/panel/MenuUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/zetcode/panel/MenuUI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/zetcode/tool/MakeButton.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/zetcode/tool/MakeButton.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/zetcode/tool/MakeFont.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/zetcode/tool/MakeFont.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/zetcode/tool/MakeLabel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/zetcode/tool/MakeLabel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/zetcode/var/StaticVar.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/zetcode/var/StaticVar.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/resources/data/score.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/data/score.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -233,26 +213,26 @@
     </state>
     <state x="549" y="127" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1600493172155" />
     <state x="915" y="222" key="FileChooserDialogImpl/0.0.2560.1440/-1920.349.1920.1080@0.0.2560.1440" timestamp="1602518124567" />
-    <state width="2517" height="156" key="GridCell.Tab.0.bottom" timestamp="1602532720421">
+    <state width="2517" height="155" key="GridCell.Tab.0.bottom" timestamp="1602537407785">
       <screen x="0" y="0" width="2560" height="1440" />
     </state>
     <state width="1230" height="195" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1602443474946" />
-    <state width="2517" height="156" key="GridCell.Tab.0.bottom/0.0.2560.1440/-1920.349.1920.1080@0.0.2560.1440" timestamp="1602532720421" />
-    <state width="2517" height="156" key="GridCell.Tab.0.center" timestamp="1602532720421">
+    <state width="2517" height="155" key="GridCell.Tab.0.bottom/0.0.2560.1440/-1920.349.1920.1080@0.0.2560.1440" timestamp="1602537407785" />
+    <state width="2517" height="155" key="GridCell.Tab.0.center" timestamp="1602537407785">
       <screen x="0" y="0" width="2560" height="1440" />
     </state>
     <state width="1230" height="195" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1602443474946" />
-    <state width="2517" height="156" key="GridCell.Tab.0.center/0.0.2560.1440/-1920.349.1920.1080@0.0.2560.1440" timestamp="1602532720421" />
-    <state width="2517" height="156" key="GridCell.Tab.0.left" timestamp="1602532720421">
+    <state width="2517" height="155" key="GridCell.Tab.0.center/0.0.2560.1440/-1920.349.1920.1080@0.0.2560.1440" timestamp="1602537407785" />
+    <state width="2517" height="155" key="GridCell.Tab.0.left" timestamp="1602537407785">
       <screen x="0" y="0" width="2560" height="1440" />
     </state>
     <state width="1230" height="195" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1602443474946" />
-    <state width="2517" height="156" key="GridCell.Tab.0.left/0.0.2560.1440/-1920.349.1920.1080@0.0.2560.1440" timestamp="1602532720421" />
-    <state width="2517" height="156" key="GridCell.Tab.0.right" timestamp="1602532720421">
+    <state width="2517" height="155" key="GridCell.Tab.0.left/0.0.2560.1440/-1920.349.1920.1080@0.0.2560.1440" timestamp="1602537407785" />
+    <state width="2517" height="155" key="GridCell.Tab.0.right" timestamp="1602537407785">
       <screen x="0" y="0" width="2560" height="1440" />
     </state>
     <state width="1230" height="195" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1602443474946" />
-    <state width="2517" height="156" key="GridCell.Tab.0.right/0.0.2560.1440/-1920.349.1920.1080@0.0.2560.1440" timestamp="1602532720421" />
+    <state width="2517" height="155" key="GridCell.Tab.0.right/0.0.2560.1440/-1920.349.1920.1080@0.0.2560.1440" timestamp="1602537407785" />
     <state width="2517" height="154" key="GridCell.Tab.1.bottom" timestamp="1602499496196">
       <screen x="0" y="0" width="2560" height="1440" />
     </state>
