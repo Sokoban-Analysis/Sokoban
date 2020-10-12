@@ -3,6 +3,7 @@ package com.zetcode.frame;
 import com.zetcode.listener.BoardKeyListner;
 import com.zetcode.panel.Board;
 import com.zetcode.panel.MainUI;
+import com.zetcode.panel.MenuUI;
 
 import javax.swing.*;
 import java.awt.*;
@@ -12,6 +13,7 @@ import static com.zetcode.var.StaticVar.*;
 public class PanelChange extends JFrame {
     public Board board = null;
     public MainUI mainUi = null;
+    public MenuUI menuUI = null;
     private CardLayout cards = new CardLayout();
     private JButton button1;
     private JPanel panel1;
@@ -39,6 +41,12 @@ public class PanelChange extends JFrame {
         mainUi = new MainUI(this);
         getContentPane().add("main", mainUi);
         setTitle("Sokoban - MainUI");
+    }
+
+    public void initMenuUI(){
+        menuUI = new MenuUI(this);
+        getContentPane().add("menu", menuUI);
+        setTitle("Sokoban - MenuUI");
     }
 
     public void changePanel(){

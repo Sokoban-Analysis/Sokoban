@@ -9,9 +9,9 @@ import java.awt.event.ActionListener;
 
 public class MainUI extends JPanel implements ActionListener {
     private PanelChange change;
-    private ImageIcon backImg = new ImageIcon("src/resources/mainBack.png");
-    private ImageIcon playButtonImg = new ImageIcon("src/resources/playButton.png");
-    private ImageIcon playButtonImgDown = new ImageIcon("src/resources/playButtonDown.png");
+    private ImageIcon backImg = new ImageIcon("src/resources/main/mainBack.png");
+    private ImageIcon playButtonImg = new ImageIcon("src/resources/main/playButton.png");
+    private ImageIcon playButtonImgDown = new ImageIcon("src/resources/main/playButtonDown.png");
     private JButton playButton;
 
     public MainUI(PanelChange change) {
@@ -33,7 +33,7 @@ public class MainUI extends JPanel implements ActionListener {
     public void actionPerformed(ActionEvent e) {
         // TODO Auto-generated method stub
         if(e.getSource()==playButton){
-            change.initBoard();
+            change.initMenuUI();
             change.changePanel();
         }
     }
