@@ -10,13 +10,16 @@ public class MainUI extends JPanel implements ActionListener {
     private PanelChange change;
     private ImageIcon backImg = new ImageIcon("src/resources/mainBack.png");
     private ImageIcon playButtonImg = new ImageIcon("src/resources/playButton.png");
+    private ImageIcon playButtonImgDown = new ImageIcon("src/resources/playButtonDown.png");
     private JButton playButton;
 
     public MainUI(PanelChange change) {
         setLayout(null);
         this.change = change;
         playButton = new JButton(playButtonImg);
-        playButton.setSize(298,128);
+        playButton.setBounds(500,432,298,128);
+        playButton.setRolloverIcon(playButtonImgDown);
+        playButton.setPressedIcon(playButtonImgDown);
         playButton.setBackground(Color.red);
         playButton.setBorderPainted(false);
         playButton.setFocusPainted(false);
