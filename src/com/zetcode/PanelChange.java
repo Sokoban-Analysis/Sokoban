@@ -14,8 +14,8 @@ public class PanelChange extends JFrame {
 
 
     public PanelChange(){
-        setUndecorated(true);
-        setSize(1280, 720);
+/*        setUndecorated(true); 프레임 없애기*/
+        setSize(1280, 755);
         getContentPane().setLayout(cards);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); //어플리케이션 종료 열려 있는 모든 윈도우 종료
         setLocationRelativeTo(null);//윈도우 창을 화면의 가운데에 띄우는 역할
