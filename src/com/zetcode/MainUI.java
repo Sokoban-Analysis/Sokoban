@@ -1,25 +1,43 @@
 package com.zetcode;
 
 import javax.swing.*;
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.beans.PropertyChangeListener;
 
-public class MainUI extends JPanel {
+public class MainUI extends JPanel implements ActionListener {
     private PanelChange change;
+    private ImageIcon backImg = new ImageIcon("src/resources/mainBack.png");
+    private ImageIcon playButtonImg = new ImageIcon("src/resources/playButton.png");
+    private JButton playButton;
 
-    public MainUI(PanelChange change){
+    public MainUI(PanelChange change) {
         setLayout(null);
         this.change = change;
-        JButton btn = new JButton("버튼");
-        btn.setSize(200,100);
-        add(btn);
-        btn.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                change.initBoard();
-                change.changePanel();
-            }
-        });
+        playButton = new JButton(playButtonImg);
+        playButton.setSize(298,128);
+        playButton.setBackground(Color.red);
+        playButton.setBorderPainted(false);
+        playButton.setFocusPainted(false);
+        playButton.setContentAreaFilled(false);
+        playButton.addActionListener(this);
+        add(playButton);
+    }
+
+    @Override
+    public void actionPerformed(ActionEvent e) {
+        // TODO Auto-generated method stub
+        if(e.getSource()==playButton){
+            change.initBoard();
+            change.changePanel();
+        }
+    }
+
+
+    @Override
+    public void paintComponent(Graphics g) {
+        super.paintComponent(g);
+        g.drawImage(backImg.getImage(), 0,0, 1280,720,null);
     }
 }

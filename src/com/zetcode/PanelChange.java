@@ -9,9 +9,12 @@ public class PanelChange extends JFrame {
     public Board board = null;
     public MainUI mainUi = null;
     private CardLayout cards = new CardLayout();
+    private JButton button1;
+    private JPanel panel1;
 
 
     public PanelChange(){
+        setUndecorated(true);
         setSize(1280, 720);
         getContentPane().setLayout(cards);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); //어플리케이션 종료 열려 있는 모든 윈도우 종료
