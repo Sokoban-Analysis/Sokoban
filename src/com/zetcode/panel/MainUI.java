@@ -1,10 +1,11 @@
-package com.zetcode;
+package com.zetcode.panel;
+
+import com.zetcode.frame.PanelChange;
 
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.beans.PropertyChangeListener;
 
 public class MainUI extends JPanel implements ActionListener {
     private PanelChange change;

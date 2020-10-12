@@ -1,9 +1,13 @@
-package com.zetcode;
+package com.zetcode.frame;
+
+import com.zetcode.listener.BoardKeyListner;
+import com.zetcode.panel.Board;
+import com.zetcode.panel.MainUI;
 
 import javax.swing.*;
 import java.awt.*;
 
-import static com.zetcode.StaticVar.*;
+import static com.zetcode.var.StaticVar.*;
 
 public class PanelChange extends JFrame {
     public Board board = null;

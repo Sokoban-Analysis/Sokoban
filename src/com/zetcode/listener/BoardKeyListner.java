@@ -1,10 +1,12 @@
-package com.zetcode;
+package com.zetcode.listener;
 
-import java.awt.*;
+import com.zetcode.game.Player;
+import com.zetcode.panel.Board;
+
 import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
 
-import static com.zetcode.StaticVar.*;
+import static com.zetcode.var.StaticVar.*;
 
 public class BoardKeyListner extends KeyAdapter{
     private Board board;

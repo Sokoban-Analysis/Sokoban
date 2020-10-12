@@ -1,16 +1,13 @@
-package com.zetcode;
+package com.zetcode.panel;
+
+import com.zetcode.game.*;
 
 import java.awt.*;
 import java.awt.event.*;
-import java.io.BufferedReader;
-import java.io.InputStreamReader;
 import java.util.ArrayList;
 import javax.swing.*;
-import javax.sound.sampled.AudioInputStream;
-import javax.sound.sampled.AudioSystem;
-import javax.sound.sampled.Clip;
 import java.io.File;
-import static com.zetcode.StaticVar.*;
+import static com.zetcode.var.StaticVar.*;
 
 public class Board extends JPanel implements ActionListener {
 

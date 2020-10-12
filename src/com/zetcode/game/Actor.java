@@ -1,10 +1,11 @@
-package com.zetcode;
+package com.zetcode.game;
 
 import java.awt.Image;
 
+import static com.zetcode.var.StaticVar.SPACE;
+
 public class Actor {
 
-    private final int SPACE = 20;
 
     private int x;
     private int y;

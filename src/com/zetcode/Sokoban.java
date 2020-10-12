@@ -1,7 +1,8 @@
 package com.zetcode;
 
+import com.zetcode.frame.PanelChange;
+
 import java.awt.*;
-import javax.swing.*;
 
 public class Sokoban{
     public static void main(String[] args) {

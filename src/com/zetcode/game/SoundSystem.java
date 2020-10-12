@@ -1,4 +1,4 @@
-package com.zetcode;
+package com.zetcode.game;
 
 import javax.sound.sampled.AudioInputStream;
 import javax.sound.sampled.AudioSystem;

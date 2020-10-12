@@ -1,4 +1,4 @@
-package com.zetcode;
+package com.zetcode.var;
 
 public class StaticVar {
     public static int Xoffset = 0;//거리
