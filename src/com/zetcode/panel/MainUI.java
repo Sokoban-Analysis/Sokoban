@@ -1,6 +1,7 @@
 package com.zetcode.panel;
 
 import com.zetcode.frame.PanelChange;
+import com.zetcode.tool.MakeButton;
 
 import javax.swing.*;
 import java.awt.*;

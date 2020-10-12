@@ -1,4 +1,4 @@
-package com.zetcode.panel;
+package com.zetcode.tool;
 
 import javax.swing.*;
 import java.awt.*;
@@ -10,7 +10,6 @@ public class MakeButton {
     private JButton button;
     private ImageIcon buttonImg;
     private ImageIcon buttonImgDown;
-
     public MakeButton(JPanel panel, String path1, String path2){
         this.panel = panel;
         buttonImg = new ImageIcon(path1);
@@ -28,7 +27,6 @@ public class MakeButton {
         button.addActionListener(listener);
         panel.add(button);
     }
-
     public JButton getButton(){
         return  this.button;
     }

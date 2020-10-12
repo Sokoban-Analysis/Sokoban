@@ -1,40 +1,55 @@
 package com.zetcode.panel;
 
+import com.zetcode.frame.PanelChange;
 import com.zetcode.game.*;
+import com.zetcode.listener.BoardKeyListner;
+import com.zetcode.tool.MakeLabel;
 
 import java.awt.*;
 import java.awt.event.*;
+import java.io.*;
 import java.util.ArrayList;
 import javax.swing.*;
-import java.io.File;
+import java.util.concurrent.Executors;
+import java.util.concurrent.ScheduledExecutorService;
+import java.util.concurrent.TimeUnit;
+
 import static com.zetcode.var.StaticVar.*;
 
-public class Board extends JPanel implements ActionListener {
+public class Board extends JPanel{
 
     private ArrayList<Wall> walls;
     private ArrayList<Baggage> baggs;
     private ArrayList<Area> areas;
     private SoundSystem soundBG;
     private SoundSystem sucessSound;
+    private JLabel scoreLabel;
+    private int finishedBags = 0;
+    private int nOfBags;
 
-    public Player soko;
     private String level;
-    private int score = 0;
+    private ImageIcon backImg = new ImageIcon("src/resources/board/background.png");
 
     public boolean isCompleted = false;
+    public PanelChange panelChange;
 
-    public Board(String level) {//생성자
+    public Board(String level, PanelChange panelChange, int timeto) {//생성자
+        score[0] = 0;
+        time[0] = timeto;
         this.level = level;
+        this.panelChange = panelChange;
+        scoreTimer = Executors.newScheduledThreadPool(0);
         soundBG = new SoundSystem(new File("src/resources/background.wav"));
         soundBG.play();
         setOffsetPosition();
+        System.out.println(Yoffset +" "+  Xoffset);
         initWorld();
-        mTimer.start();
     }
-
 
     private void setOffsetPosition(){
         int maxOffset = 0;
+        Xoffset = 0;
+        Yoffset = 0;
         for (int i = 0; i < level.length(); i++) {
             char item = level.charAt(i);//level의 i번째 인덱스 가져오기
             switch (item) {
@@ -52,8 +67,6 @@ public class Board extends JPanel implements ActionListener {
         }
         Xoffset = maxOffset/2;
         Yoffset = Yoffset/2;
-        System.out.println(Xoffset);
-        System.out.println(Yoffset);
     }
 
     private void initWorld() {
@@ -92,7 +105,7 @@ public class Board extends JPanel implements ActionListener {
                     x += SPACE;
                     break;
                 case '@'://플레이어(공 옮기는 역할)
-                    soko = new Player(x, y);
+                    soko[0] = new Player(x, y);
                     x += SPACE;
                     break;
                 case ' '://공백
@@ -105,14 +118,14 @@ public class Board extends JPanel implements ActionListener {
     }
     private void buildWorld(Graphics g) {
         g.setColor(new Color(250, 240, 170));
-        g.fillRect(0, 0, this.getWidth(), this.getHeight());
+        g.drawImage(backImg.getImage(), 0,0, 1280,720,null);
 
         ArrayList<Actor> world = new ArrayList<>();
 
         world.addAll(walls);
         world.addAll(areas);
         world.addAll(baggs);
-        world.add(soko);
+        world.add(soko[0]);
 
         for (int i = 0; i < world.size(); i++) {
 
@@ -125,29 +138,13 @@ public class Board extends JPanel implements ActionListener {
                 
                 g.drawImage(item.getImage(), item.x(), item.y(), this);
             }
-
             if (isCompleted) {
-                
                 g.setColor(new Color(0, 0, 0));
                 g.drawString("Completed", 25, 20);
             }
         }
     }
-    //시간제한
-    Timer mTimer = new Timer(1000, this);
-    int mTime = 60;
-    public void actionPerformed(ActionEvent arg0) {
-        if(mTimer == arg0.getSource()) {
-            mTime--;
-            if (mTime <= 0) {
-                mTimer.stop();
-                JOptionPane.showMessageDialog(this, "게임에 실패했습니다.",
-                        "**제한 시간 60초 초과**", JOptionPane.INFORMATION_MESSAGE);
-                System.exit(JFrame.EXIT_ON_CLOSE);
-            }
-            repaint();
-        }
-    }
+
 
     @Override
     public void paintComponent(Graphics g) {
@@ -196,11 +193,12 @@ public class Board extends JPanel implements ActionListener {
     }
 
     public boolean checkBagCollision(int type) {
+        score[0] += 50;
         switch (type) {
             case LEFT_COLLISION:
                 for (int i = 0; i < baggs.size(); i++) {
                     Baggage bag = baggs.get(i);
-                    if (soko.isLeftCollision(bag)) {
+                    if (soko[0].isLeftCollision(bag)) {
                         for (int j = 0; j < baggs.size(); j++) {
                             Baggage item = baggs.get(j);
                             if (!bag.equals(item)) {
@@ -220,7 +218,7 @@ public class Board extends JPanel implements ActionListener {
             case RIGHT_COLLISION:
                 for (int i = 0; i < baggs.size(); i++) {
                     Baggage bag = baggs.get(i);
-                    if (soko.isRightCollision(bag)) {
+                    if (soko[0].isRightCollision(bag)) {
                         for (int j = 0; j < baggs.size(); j++) {
                             Baggage item = baggs.get(j);
                             if (!bag.equals(item)) {
@@ -240,7 +238,7 @@ public class Board extends JPanel implements ActionListener {
             case TOP_COLLISION:
                 for (int i = 0; i < baggs.size(); i++) {
                     Baggage bag = baggs.get(i);
-                    if (soko.isTopCollision(bag)) {
+                    if (soko[0].isTopCollision(bag)) {
                         for (int j = 0; j < baggs.size(); j++) {
                             Baggage item = baggs.get(j);
                             if (!bag.equals(item)) {
@@ -260,7 +258,7 @@ public class Board extends JPanel implements ActionListener {
             case BOTTOM_COLLISION:
                 for (int i = 0; i < baggs.size(); i++) {
                     Baggage bag = baggs.get(i);
-                    if (soko.isBottomCollision(bag)) {
+                    if (soko[0].isBottomCollision(bag)) {
                         for (int j = 0; j < baggs.size(); j++) {
                             Baggage item = baggs.get(j);
                             if (!bag.equals(item)) {
@@ -284,15 +282,15 @@ public class Board extends JPanel implements ActionListener {
     }
 
     public void isCompleted() {//게임 끝
-        int nOfBags = baggs.size();
-        int finishedBags = 0;//다 옮긴 짐 개수
-        int n = 10;//시간 제한
+        nOfBags = baggs.size();
+        finishedBags = 0;
         for (int i = 0; i < nOfBags; i++) {
             Baggage bag = baggs.get(i);
             for (int j = 0; j < nOfBags; j++) {
                 Area area =  areas.get(j);
                 if (bag.x() == area.x() && bag.y() == area.y()) {//짐이 area 좌표의 위치와 같으면(잘 놨으면)
                     finishedBags += 1;
+                    score[0] += 1000;
                 }
             }
         }
@@ -300,23 +298,61 @@ public class Board extends JPanel implements ActionListener {
             isCompleted = true;
             repaint();
             try {//게임 성공하면 효과음
+                setScore();
                 sucessSound = new SoundSystem(new File("src/resources/success.wav"));
-                soundBG.stop();
                 sucessSound.play();
+                soundBG.stop();
+                scoreTimer.shutdown();
             } catch (Exception e) {
                 e.printStackTrace();
             }
+        }else{
+            sucessSound = new SoundSystem(new File("src/resources/success.wav"));
+            sucessSound.play();
+            soundBG.stop();
+            scoreTimer.shutdown();
         }
     }
 
-    public void restartLevel() {
+    public void setScore(){
+        File file = new File("src/resources/data/score.txt");
+        String scoreStr = "";
+        score[0] = Integer.parseInt( this.scoreLabel.getText());
+        try{
+            FileReader file_reader = new FileReader(file);
+            BufferedReader br = new BufferedReader(file_reader);
+            scoreStr = br.readLine();
+            if(Integer.parseInt(scoreStr) < score[0]){
+                BufferedWriter writer = new BufferedWriter(new FileWriter(file));
+                System.out.println(String.valueOf(score[0]));
+                writer.write(String.valueOf(score[0]));
+                writer.close();
+            }
+        }catch (Exception e){}
+    }
 
+    public void StopBoard(){
+        isCompleted = true;
+        repaint();
+        sucessSound = new SoundSystem(new File("src/resources/failed.wav"));
+        sucessSound.play();
+        soundBG.stop();
+        scoreTimer.shutdown();
+    }
+
+    public void getScoreLabel(JLabel label){
+        this.scoreLabel = label;
+    }
+
+    public void restartLevel() {
+        score[0] = 0;
+        time[0] = 10;
         areas.clear();
         baggs.clear();
         walls.clear();
-
+        setOffsetPosition();
+        System.out.println(Yoffset +" "+  Xoffset);
         initWorld();
-
         if (isCompleted) {
             isCompleted = false;
         }

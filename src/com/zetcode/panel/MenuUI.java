@@ -1,16 +1,24 @@
 package com.zetcode.panel;
 
 import com.zetcode.frame.PanelChange;
+import com.zetcode.tool.MakeButton;
+import com.zetcode.tool.MakeFont;
+import com.zetcode.tool.MakeLabel;
 
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.io.*;
+import java.util.concurrent.Executors;
+import java.util.concurrent.ScheduledExecutorService;
+import java.util.concurrent.TimeUnit;
 
 import static com.zetcode.var.StaticVar.*;
 
 public class MenuUI extends JPanel implements ActionListener {
     private PanelChange change;
+    private MakeLabel makeLabel;
     private ImageIcon backImg = new ImageIcon("src/resources/menu/menuBack.png");
     private final String[] levelButtonPath
             ={
@@ -70,28 +78,28 @@ public class MenuUI extends JPanel implements ActionListener {
         modButton[3] = new MakeButton(this,modButtonPath[3], modButtonPathDown[3]);
         modButton[3].setup(769, 577,348,108, this::actionPerformed);
 
-/*        JLabel score = new JLabel();
-        score.setText("100000");
-        Font font = new Font("Power Pixel-7", Font.BOLD);*/
+        makeLabel = new MakeLabel(802, 167, 300,65, 60f);
+        makeLabel.add(this);
     }
+
 
     @Override
     public void actionPerformed(ActionEvent e) {
         // TODO Auto-generated method stub
         if(e.getSource()==levelButton[0].getButton()){
-            change.initBoard(level1);
+            change.initBoard(level1, 10);
             change.changePanel();
         }else if(e.getSource()==levelButton[1].getButton()){
-            change.initBoard(level2);
+            change.initBoard(level2, 10);
             change.changePanel();
         }else if(e.getSource()==levelButton[2].getButton()){
-            change.initBoard(level3);
+            change.initBoard(level3, 10);
             change.changePanel();
         }else if(e.getSource()==levelButton[3].getButton()){
-            change.initBoard(level4);
+            change.initBoard(level4, 10);
             change.changePanel();
         }else if(e.getSource()==levelButton[4].getButton()){
-            change.initBoard(level5);
+            change.initBoard(level5, 10);
             change.changePanel();
         }
     }
@@ -100,6 +108,14 @@ public class MenuUI extends JPanel implements ActionListener {
     public void paintComponent(Graphics g) {
         super.paintComponent(g);
         g.drawImage(backImg.getImage(), 0,0, 1280,720,null);
+        File file = new File("src/resources/data/score.txt");
+        String scoreStr = "";
+        try{
+            FileReader file_reader = new FileReader(file);
+            BufferedReader br = new BufferedReader(file_reader);
+            scoreStr = br.readLine();
+        }catch (Exception e){}
+        makeLabel.setText(scoreStr);
     }
 
 }
