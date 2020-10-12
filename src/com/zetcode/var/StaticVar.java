@@ -17,6 +17,9 @@ public class StaticVar {
     public static final int RIGHT_COLLISION = 2;
     public static final int TOP_COLLISION = 3;
     public static final int BOTTOM_COLLISION = 4;
+    public static final int RUNNABLE = 1;
+    public static final int SUCCESS = 2;
+    public static final int FAILED = 0;
 
     public static String level1
             ="####### \n" +

@@ -21,11 +21,8 @@ public class Board extends JPanel{
     private ArrayList<Wall> walls;
     private ArrayList<Baggage> baggs;
     private ArrayList<Area> areas;
-    private SoundSystem soundBG;
-    private SoundSystem sucessSound;
-    private JLabel scoreLabel;
-    private int finishedBags = 0;
-    private int nOfBags;
+    public int finishedBags = 0;
+    public int nOfBags;
 
     private String level;
     private ImageIcon backImg = new ImageIcon("src/resources/board/background.png");
@@ -39,11 +36,10 @@ public class Board extends JPanel{
         this.level = level;
         this.panelChange = panelChange;
         scoreTimer = Executors.newScheduledThreadPool(0);
-        soundBG = new SoundSystem(new File("src/resources/background.wav"));
-        soundBG.play();
         setOffsetPosition();
         System.out.println(Yoffset +" "+  Xoffset);
         initWorld();
+        nOfBags = baggs.size();
     }
 
     private void setOffsetPosition(){
@@ -294,55 +290,14 @@ public class Board extends JPanel{
                 }
             }
         }
-        if (finishedBags == nOfBags) {
-            isCompleted = true;
-            repaint();
-            try {//게임 성공하면 효과음
-                setScore();
-                sucessSound = new SoundSystem(new File("src/resources/success.wav"));
-                sucessSound.play();
-                soundBG.stop();
-                scoreTimer.shutdown();
-            } catch (Exception e) {
-                e.printStackTrace();
-            }
-        }else{
-            sucessSound = new SoundSystem(new File("src/resources/success.wav"));
-            sucessSound.play();
-            soundBG.stop();
-            scoreTimer.shutdown();
-        }
-    }
-
-    public void setScore(){
-        File file = new File("src/resources/data/score.txt");
-        String scoreStr = "";
-        score[0] = Integer.parseInt( this.scoreLabel.getText());
-        try{
-            FileReader file_reader = new FileReader(file);
-            BufferedReader br = new BufferedReader(file_reader);
-            scoreStr = br.readLine();
-            if(Integer.parseInt(scoreStr) < score[0]){
-                BufferedWriter writer = new BufferedWriter(new FileWriter(file));
-                System.out.println(String.valueOf(score[0]));
-                writer.write(String.valueOf(score[0]));
-                writer.close();
-            }
-        }catch (Exception e){}
     }
 
     public void StopBoard(){
         isCompleted = true;
         repaint();
-        sucessSound = new SoundSystem(new File("src/resources/failed.wav"));
-        sucessSound.play();
-        soundBG.stop();
         scoreTimer.shutdown();
     }
 
-    public void getScoreLabel(JLabel label){
-        this.scoreLabel = label;
-    }
 
     public void restartLevel() {
         score[0] = 0;
