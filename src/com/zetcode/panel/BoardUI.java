@@ -46,6 +46,17 @@ public class BoardUI extends JPanel implements ActionListener {
         setLayout(null);
         result = RUNNABLE;
         initLabel();
+        if(conMod){
+            while(true){
+                int key = replayFileReader.getNextKey();
+                if(key == 0){
+                    time = replayFileReader.getFinalTime();
+                    conMod = false;
+                    break;
+                }
+                boardKeyListner.keyEventProcess(key);
+            }
+        }
         runTimer();
         System.out.println(board.panelChange.getContentPane().getComponents().length);
     }
@@ -83,7 +94,29 @@ public class BoardUI extends JPanel implements ActionListener {
             board.panelChange.changePanel();
             board.removeAll();
             board.validate();
+            continuFileWrite();
         }
+    }
+
+    private void continuFileWrite(){
+        File file = new File("src/resources/data/replay");
+        File file1 = file.listFiles()[file.listFiles().length-1];
+        File conFile;
+        if(modStatue == TwoPLAYER){
+            conFile = new File("src/resources/data/continue/continue-2.txt");
+        }else{
+            conFile = new File("src/resources/data/continue/continue-1.txt");
+        }
+        try{
+            FileInputStream fis = new FileInputStream(file1); //읽을파일
+            FileOutputStream fos = new FileOutputStream(conFile); //복사할파일
+            int fileByte = 0;
+            while((fileByte = fis.read()) != -1) {
+                fos.write(fileByte);
+            }
+            fis.close();
+            fos.close();
+        }catch (Exception e){}
     }
 
     public void setScore(){

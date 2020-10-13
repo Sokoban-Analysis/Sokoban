@@ -58,6 +58,7 @@ public class ReplayFileWriter {
     public void saveReplay(String time){
         if(replayMod) return;
         if(saveStatue){
+            System.out.println("저장됨");
             fileWrite(keyCode + "-"+ score + "-" + time);
         }
     }

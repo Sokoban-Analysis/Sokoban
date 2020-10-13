@@ -134,27 +134,22 @@ public class MenuUI extends JPanel implements ActionListener {
             modStatue = TwoPLAYER;
             SetUpMod();
         }else if(e.getSource()==modButton[0].getButton()){
-/*            replayMod = true;
-            File file = new File("src/resources/data/replay/2020.10.13.22.49.43-2.txt");
-            modStatue = TwoPLAYER;
-            replayFileReader = new ReplayFileReader(file);
+            File conFile;
+            if(modStatue == TwoPLAYER){
+                conFile = new File("src/resources/data/continue/continue-2.txt");
+            }else{
+                conFile = new File("src/resources/data/continue/continue-1.txt");
+            }
+            replayFileReader = new ReplayFileReader(conFile);
+            conMod = true;
             change.initBoard(levelFileRead(replayFileReader.level), replayFileReader.time);
-            change.changePanel();*/
+            change.changePanel();
         }else if(e.getSource()==modButton[3].getButton()){
             change.initReplayUI();
             change.changePanel();
         }
     }
 
-/*    public void levelFileWrite(String str, int count){
-        System.out.println(str);
-        File file = new File("src/resources/data/level/"+count+".txt");
-        try{
-            FileWriter writer = new FileWriter(file, true);
-            writer.write(str);
-            writer.close();
-        }catch (Exception e){ System.out.println(e.getMessage());}
-    }*/
 
     public String levelFileRead(int level){
         String str = "";

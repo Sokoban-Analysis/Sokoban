@@ -25,26 +25,24 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cdbf11fd-8829-45d4-95d5-fae79ca40161" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/resources/menu/down/replayBtn.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/resources/menu/replayBtn.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/resources/data/continue/continue-1.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/resources/data/continue/continue-2.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/resources/data/replay/2020.10.14.2.37.58-1.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/resources/data/replay/2020.10.14.2.38.3-1.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/resources/data/replay/2020.10.14.2.38.45-1.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/resources/data/replay/2020.10.14.2.38.5-1.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/resources/data/replay/2020.10.14.2.38.51-1.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/resources/data/replay/2020.10.14.2.38.59-1.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/resources/data/replay/2020.10.14.2.40.12-1.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/resources/data/replay/2020.10.14.2.40.8-1.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/resources/data/replay/2020.10.14.2.41.43-1.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/zetcode/frame/PanelChange.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/zetcode/frame/PanelChange.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/zetcode/game/Wall.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/zetcode/game/Wall.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/zetcode/panel/BoardUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/zetcode/panel/BoardUI.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/zetcode/panel/MenuUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/zetcode/panel/MenuUI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/zetcode/panel/ReplayListUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/zetcode/panel/ReplayListUI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/zetcode/tool/MakeFont.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/zetcode/tool/MakeFont.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/data/replay/2020.10.13.22.32.17-1.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/data/replay/2020.10.13.22.32.17-2.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/data/replay/2020.10.13.22.36.46-1.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/data/replay/2020.10.13.22.36.46-2.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/data/replay/2020.10.13.22.39.3-1.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/data/replay/2020.10.13.22.39.3-2.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/data/replay/2020.10.13.22.39.38-1.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/data/replay/2020.10.13.22.39.38-2.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/data/replay/2020.10.13.22.41.21-1.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/data/replay/2020.10.13.22.41.21-2.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/data/replay/2020.10.13.22.49.16-1.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/data/replay/2020.10.13.22.49.43-2.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/zetcode/replay/ReplayFileReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/zetcode/replay/ReplayFileReader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/zetcode/replay/ReplayFileWriter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/zetcode/replay/ReplayFileWriter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/zetcode/var/StaticVar.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/zetcode/var/StaticVar.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -80,28 +78,28 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../BLDToolAddon" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/resources/data/continue" />
     <property name="project.structure.last.edited" value="Artifacts" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.3034483" />
     <property name="settings.editor.selected.configurable" value="configurable.group.tools" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\garbi\IdeaProjects\Java-Sokoban-Game\src\resources\data\continue" />
+      <recent name="C:\Users\garbi\IdeaProjects\Java-Sokoban-Game\src\resources\data\level" />
+      <recent name="C:\Users\garbi\IdeaProjects\Java-Sokoban-Game\src\resources\main" />
+      <recent name="C:\Users\garbi\IdeaProjects\Java-Sokoban-Game\src\resources" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.zetcode.listener" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\garbi\IdeaProjects\Java-Sokoban-Game\src\resources\board" />
       <recent name="C:\Users\garbi\IdeaProjects\Java-Sokoban-Game\src\resources\data\continue" />
       <recent name="C:\Users\garbi\IdeaProjects\Java-Sokoban-Game\src\resources\menu\down" />
       <recent name="C:\Users\garbi\IdeaProjects\Java-Sokoban-Game\src\resources\main" />
       <recent name="C:\Users\garbi\IdeaProjects\Java-Sokoban-Game\src\resources\menu" />
-    </key>
-    <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="com.zetcode.listener" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\garbi\IdeaProjects\Java-Sokoban-Game\src\resources\data\level" />
-      <recent name="C:\Users\garbi\IdeaProjects\Java-Sokoban-Game\src\resources\main" />
-      <recent name="C:\Users\garbi\IdeaProjects\Java-Sokoban-Game\src\resources\data\continue" />
-      <recent name="C:\Users\garbi\IdeaProjects\Java-Sokoban-Game\src\resources" />
     </key>
   </component>
   <component name="RunManager" selected="Application.Sokoban">
@@ -232,26 +230,26 @@
     </state>
     <state x="549" y="127" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1600493172155" />
     <state x="915" y="222" key="FileChooserDialogImpl/0.0.2560.1440/-1920.349.1920.1080@0.0.2560.1440" timestamp="1602605310161" />
-    <state width="2517" height="130" key="GridCell.Tab.0.bottom" timestamp="1602607736570">
+    <state width="2517" height="543" key="GridCell.Tab.0.bottom" timestamp="1602610899682">
       <screen x="0" y="0" width="2560" height="1440" />
     </state>
     <state width="1230" height="195" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1602443474946" />
-    <state width="2517" height="130" key="GridCell.Tab.0.bottom/0.0.2560.1440/-1920.349.1920.1080@0.0.2560.1440" timestamp="1602607736570" />
-    <state width="2517" height="130" key="GridCell.Tab.0.center" timestamp="1602607736570">
+    <state width="2517" height="543" key="GridCell.Tab.0.bottom/0.0.2560.1440/-1920.349.1920.1080@0.0.2560.1440" timestamp="1602610899682" />
+    <state width="2517" height="543" key="GridCell.Tab.0.center" timestamp="1602610899682">
       <screen x="0" y="0" width="2560" height="1440" />
     </state>
     <state width="1230" height="195" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1602443474946" />
-    <state width="2517" height="130" key="GridCell.Tab.0.center/0.0.2560.1440/-1920.349.1920.1080@0.0.2560.1440" timestamp="1602607736570" />
-    <state width="2517" height="130" key="GridCell.Tab.0.left" timestamp="1602607736570">
+    <state width="2517" height="543" key="GridCell.Tab.0.center/0.0.2560.1440/-1920.349.1920.1080@0.0.2560.1440" timestamp="1602610899682" />
+    <state width="2517" height="543" key="GridCell.Tab.0.left" timestamp="1602610899682">
       <screen x="0" y="0" width="2560" height="1440" />
     </state>
     <state width="1230" height="195" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1602443474946" />
-    <state width="2517" height="130" key="GridCell.Tab.0.left/0.0.2560.1440/-1920.349.1920.1080@0.0.2560.1440" timestamp="1602607736570" />
-    <state width="2517" height="130" key="GridCell.Tab.0.right" timestamp="1602607736570">
+    <state width="2517" height="543" key="GridCell.Tab.0.left/0.0.2560.1440/-1920.349.1920.1080@0.0.2560.1440" timestamp="1602610899682" />
+    <state width="2517" height="543" key="GridCell.Tab.0.right" timestamp="1602610899682">
       <screen x="0" y="0" width="2560" height="1440" />
     </state>
     <state width="1230" height="195" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1602443474946" />
-    <state width="2517" height="130" key="GridCell.Tab.0.right/0.0.2560.1440/-1920.349.1920.1080@0.0.2560.1440" timestamp="1602607736570" />
+    <state width="2517" height="543" key="GridCell.Tab.0.right/0.0.2560.1440/-1920.349.1920.1080@0.0.2560.1440" timestamp="1602610899682" />
     <state width="2517" height="154" key="GridCell.Tab.1.bottom" timestamp="1602605149453">
       <screen x="0" y="0" width="2560" height="1440" />
     </state>

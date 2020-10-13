@@ -12,8 +12,6 @@ public class Wall extends Actor {
         
         initWall();
     }
-
-    
     private void initWall() {
         ImageIcon iicon = new ImageIcon(getClass().getClassLoader().getResource("resources/wall.png"));
         image = iicon.getImage();

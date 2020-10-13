@@ -21,6 +21,7 @@ public class ReplayFileReader {
     public ReplayFileReader(File file){
         this.file = file;
         arrayList = new ArrayList<>();
+        System.out.println(file.getName());
         player = Integer.parseInt(file.getName().split("-")[1]
                 .replaceAll("[^0-9]",""));
         readLine();
@@ -30,8 +31,8 @@ public class ReplayFileReader {
     }
 
     public int getNextKey(){
-        int key = Integer.parseInt(arrayList.get(index).split("-")[0]);
         if(index < arrayList.size()){
+            int key = Integer.parseInt(arrayList.get(index).split("-")[0]);
             index++;
             return key;
         }else{
@@ -47,6 +48,12 @@ public class ReplayFileReader {
         return Integer.parseInt(arrayList.get(index).split("-")[1]);
     }
 
+    public int getLength(){
+        return arrayList.size();
+    }
+    public double getFinalTime(){
+        return Double.parseDouble(arrayList.get(arrayList.size() - 1).split("-")[2]);
+    }
 
     public void readLine(){
         try {
