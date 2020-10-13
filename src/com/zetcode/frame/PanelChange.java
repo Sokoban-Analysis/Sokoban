@@ -1,10 +1,14 @@
 package com.zetcode.frame;
 
+import com.zetcode.game.SoundSystem;
 import com.zetcode.listener.BoardKeyListner;
+import com.zetcode.listener.WinListner;
 import com.zetcode.panel.*;
 
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.WindowEvent;
+import java.awt.event.WindowListener;
 import java.io.File;
 import java.io.IOException;
 import java.net.URISyntaxException;
@@ -21,17 +25,28 @@ public class PanelChange extends JFrame {
     public MenuUI menuUI = null;
     public ReplayListUI replayListUI = null;
     private CardLayout cards = new CardLayout();
+    private static SoundSystem soundMenuBG;
+    private WinListner winListner = new WinListner();
 
     public PanelChange() {
         /*        setUndecorated(true); 프레임 없애기*/
         setSize(1280, 755);
+        addWindowListener(winListner);
         getContentPane().setLayout(cards);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); //어플리케이션 종료 열려 있는 모든 윈도우 종료
         setLocationRelativeTo(null);//윈도우 창을 화면의 가운데에 띄우는 역할
+        if(soundMenuBG == null){
+            soundMenuBG = new SoundSystem("/resources/soundMain.wav");
+            soundMenuBG.loop();
+            soundMenuBG.play();
+        }
         initMainUI();
     }
 
+
+
     public void initBoard(String level, int timeto){
+        soundMenuBG.stopNoClose();
         board = new Board(level, this ,timeto);
         boardKeyListner = new BoardKeyListner(board);
         board.setLayout(new BorderLayout());
@@ -40,9 +55,11 @@ public class PanelChange extends JFrame {
         getContentPane().addKeyListener(boardKeyListner);
         getContentPane().setFocusable(true);
         setTitle("Sokoban - Board");
+        winListner.setBoard(board);
     }
 
     public void StopBoard(){
+        soundMenuBG.play();
         if(getContentPane().getComponents().length > 2){
             System.out.println(getContentPane().getComponents().length);
             getContentPane().remove(getContentPane().getComponents().length - 1);

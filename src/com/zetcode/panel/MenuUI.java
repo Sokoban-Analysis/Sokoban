@@ -1,6 +1,7 @@
 package com.zetcode.panel;
 
 import com.zetcode.frame.PanelChange;
+import com.zetcode.game.SoundSystem;
 import com.zetcode.replay.ReplayFileReader;
 import com.zetcode.tool.MakeButton;
 import com.zetcode.tool.MakeFont;
@@ -66,7 +67,6 @@ public class MenuUI extends JPanel implements ActionListener {
     private URL getResource(String path){
         return getClass().getClassLoader().getResource(path);
     }
-
 
     public MenuUI(PanelChange change) {
         setLayout(null);

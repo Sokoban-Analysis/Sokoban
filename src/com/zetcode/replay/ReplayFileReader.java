@@ -53,8 +53,8 @@ public class ReplayFileReader {
     }
     public double getFinalTime(){
         double time;
-        if(arrayList.get(arrayList.size() - 1).split("-")[2] == null){
-            time = 0;
+        if(arrayList.get(arrayList.size() - 1).split("-").length < 2){
+            time = this.time;
         }else{
             time = Double.parseDouble(arrayList.get(arrayList.size() - 1).split("-")[2]);
         }
