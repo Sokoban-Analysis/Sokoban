@@ -50,7 +50,7 @@ public class BoardUI extends JPanel implements ActionListener {
     }
 
     private void initLabel(){
-        timeLabel = new MakeLabel(330, 89, 200, 70, 60f);
+        timeLabel = new MakeLabel(300, 89, 300, 70, 60f);
         timeLabel.add(this);
         scoreLabel = new MakeLabel(720, 89, 300, 70, 60f);
         scoreLabel.add(this);
@@ -91,11 +91,11 @@ public class BoardUI extends JPanel implements ActionListener {
             InputStreamReader ir = new InputStreamReader(in);
             BufferedReader  reader = new BufferedReader(ir);
             scoreStr = reader.readLine();
-            if(Integer.parseInt(scoreStr) < score[0]){
+            if(Integer.parseInt(scoreStr) < score){
                 File file = new File("src/resources/data/score.txt");
                 BufferedWriter writer = new BufferedWriter(new FileWriter(file));
-                System.out.println(String.valueOf(score[0]));
-                writer.write(String.valueOf(score[0]));
+                System.out.println(String.valueOf(score));
+                writer.write(String.valueOf(score));
                 writer.close();
             }
         }catch (Exception e){}
@@ -106,15 +106,22 @@ public class BoardUI extends JPanel implements ActionListener {
         Runnable runnable = new Runnable() {
             @Override
             public void run() {
-                time[0] = (time[0] - 0.1);
-                timeLabel.setText(String.format("%.1f", time[0]));
-                if(score[0] < 0 ){
+                time = (time - 0.01);
+                timeLabel.setText(String.format("%.2f", time));
+                if(modStatue == ReplayMod){
+                   if(String.format("%.2f", time).equals(replayFileReader.getTime())){
+                       boardKeyListner.keyEventReplay(replayFileReader.getNextKey());
+                   }
+                }else{
+                    board.replayFileWriter.saveReplay(String.format("%.2f", time));
+                }
+                if(score < 0 ){
                     scoreLabel.setText("0");
                 }else{
-                    score[0]--;
-                    scoreLabel.setText(String.valueOf(score[0]));
+                    score--;
+                    scoreLabel.setText(String.valueOf(score));
                 }
-                if(time[0] < 0){
+                if(time < 0){
                     board.isCompleted = true;
                     timeLabel.setText("0.0");
                     soundBG.stop();
@@ -164,11 +171,10 @@ public class BoardUI extends JPanel implements ActionListener {
                         repaint();
                         scoreTimer.shutdown();
                     } catch (Exception e) {
-                        e.printStackTrace();
                     }
                 }
             }
         };
-        scoreTimer.scheduleAtFixedRate(runnable, 0, 100, TimeUnit.MILLISECONDS);
+        scoreTimer.scheduleAtFixedRate(runnable, 0, 10, TimeUnit.MILLISECONDS);
     }
 }

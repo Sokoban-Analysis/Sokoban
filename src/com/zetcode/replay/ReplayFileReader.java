@@ -1,0 +1,62 @@
+package com.zetcode.replay;
+
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileReader;
+import java.util.ArrayList;
+
+import static com.zetcode.var.StaticVar.*;
+
+public class ReplayFileReader {
+    private int keyCode;
+    private boolean saveStatue;
+    public int level;
+    public int time;
+    private int player;
+    private double delay;
+    private File file;
+    private ArrayList<String> arrayList;
+    private int index;
+
+    public ReplayFileReader(File file){
+        this.file = file;
+        arrayList = new ArrayList<>();
+        player = Integer.parseInt(file.getName().split("-")[1]
+                .replaceAll("[^0-9]",""));
+        readLine();
+        this.level = Integer.parseInt(arrayList.get(0));
+        this.time = Integer.parseInt(arrayList.get(1));
+        index = 2;
+    }
+
+    public int getNextKey(){
+        index++;
+        if(index < arrayList.size()){
+            return Integer.parseInt(arrayList.get(index).split("-")[0]);
+        }else{
+            modStatue = OnePLAYER;
+            return 0;
+        }
+    }
+    public String getTime(){
+        return arrayList.get(index).split("-")[2];
+    }
+
+    public double getScore(){
+        return Integer.parseInt(arrayList.get(index).split("-")[1]);
+    }
+
+
+    public void readLine(){
+        try {
+            FileReader ir = new FileReader(file);
+            BufferedReader reader = new BufferedReader(ir);
+            String line = "";
+            while ( (line = reader.readLine()) != null ) {
+                arrayList.add(line);
+            }
+        }catch (Exception e){
+            System.out.println(e.getMessage());
+        }
+    }
+}

@@ -7,7 +7,13 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileWriter;
 import java.net.URL;
+import java.util.Scanner;
+
+import static com.zetcode.var.StaticVar.*;
 
 public class MainUI extends JPanel implements ActionListener {
     private PanelChange change;
@@ -22,6 +28,7 @@ public class MainUI extends JPanel implements ActionListener {
         playbutton = new MakeButton(this, playButtonPath, playButtonDownPath);
         playbutton.setup(500,432,298,128, this::actionPerformed);
     }
+
 
     @Override
     public void actionPerformed(ActionEvent e) {

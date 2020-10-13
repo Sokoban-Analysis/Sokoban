@@ -36,10 +36,11 @@ public class PanelChange extends JFrame {
     public void initBoard(String level, int timeto){
         StopBoard();
         board = new Board(level, this ,timeto);
+        boardKeyListner = new BoardKeyListner(board);
         board.setLayout(new BorderLayout());
         board.add(new BoardUI(board), BorderLayout.CENTER);
         getContentPane().add("board", board);
-        getContentPane().addKeyListener(new BoardKeyListner(board));
+        getContentPane().addKeyListener(boardKeyListner);
         getContentPane().setFocusable(true);
         setTitle("Sokoban - Board");
         System.out.println(getContentPane().getComponents().length);

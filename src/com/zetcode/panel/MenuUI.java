@@ -1,6 +1,7 @@
 package com.zetcode.panel;
 
 import com.zetcode.frame.PanelChange;
+import com.zetcode.replay.ReplayFileReader;
 import com.zetcode.tool.MakeButton;
 import com.zetcode.tool.MakeFont;
 import com.zetcode.tool.MakeLabel;
@@ -11,6 +12,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.*;
 import java.net.URL;
+import java.util.Scanner;
 import java.util.concurrent.Executors;
 import java.util.concurrent.ScheduledExecutorService;
 import java.util.concurrent.TimeUnit;
@@ -110,19 +112,19 @@ public class MenuUI extends JPanel implements ActionListener {
     public void actionPerformed(ActionEvent e) {
         // TODO Auto-generated method stub
         if(e.getSource()==levelButton[0].getButton()){
-            change.initBoard(level1, 10);
+            change.initBoard(levelFileRead(1), 10);
             change.changePanel();
         }else if(e.getSource()==levelButton[1].getButton()){
-            change.initBoard(level2, 10);
+            change.initBoard(levelFileRead(2), 10);
             change.changePanel();
         }else if(e.getSource()==levelButton[2].getButton()){
-            change.initBoard(level3, 30);
+            change.initBoard(levelFileRead(3), 30);
             change.changePanel();
         }else if(e.getSource()==levelButton[3].getButton()){
-            change.initBoard(level4, 40);
+            change.initBoard(levelFileRead(4), 40);
             change.changePanel();
         }else if(e.getSource()==levelButton[4].getButton()){
-            change.initBoard(level5, 50);
+            change.initBoard(levelFileRead(5), 50);
             change.changePanel();
         }else if(e.getSource()==modButton[1].getButton()){
             modStatue = OnePLAYER;
@@ -130,7 +132,36 @@ public class MenuUI extends JPanel implements ActionListener {
         }else if(e.getSource()==modButton[2].getButton()){
             modStatue = TwoPLAYER;
             SetUpMod();
+        }else if(e.getSource()==modButton[0].getButton()){
+            modStatue = ReplayMod;
+            File file = new File("src/resources/data/replay/2020.10.13.19.18.58-0.txt");
+            replayFileReader = new ReplayFileReader(file);
+            change.initBoard(levelFileRead(replayFileReader.level), replayFileReader.time);
+            change.changePanel();
         }
+    }
+
+/*    public void levelFileWrite(String str, int count){
+        System.out.println(str);
+        File file = new File("src/resources/data/level/"+count+".txt");
+        try{
+            FileWriter writer = new FileWriter(file, true);
+            writer.write(str);
+            writer.close();
+        }catch (Exception e){ System.out.println(e.getMessage());}
+    }*/
+
+    public String levelFileRead(int level){
+        String str = "";
+        try{
+            File file = new File("src/resources/data/level/"+level+".txt");
+            Scanner scan = new Scanner(file);
+            while(scan.hasNextLine()){
+                str += scan.nextLine() + "\n";
+            }
+        }catch (FileNotFoundException e) {
+        }
+        return str;
     }
 
 

@@ -3,6 +3,8 @@ package com.zetcode.panel;
 import com.zetcode.frame.PanelChange;
 import com.zetcode.game.*;
 import com.zetcode.listener.BoardKeyListner;
+import com.zetcode.replay.ReplayFileReader;
+import com.zetcode.replay.ReplayFileWriter;
 import com.zetcode.tool.MakeLabel;
 
 
@@ -29,19 +31,20 @@ public class Board extends JPanel{
     public Map<Integer, Integer> twoBags = new HashMap<>();
     public int nOfBags;
 
-    private String level;
+    public String level;
     private int timeto;
     private ImageIcon backImg = new ImageIcon(getClass().getClassLoader().getResource("resources/board/background.png"));
 
     public boolean isCompleted = false;
     public PanelChange panelChange;
+    public ReplayFileWriter replayFileWriter;
 
     public Board(String level, PanelChange panelChange, int timeto) {//생성자
         setOpaque(false);
         setLayout(null);
         player = 0;
-        score[0] = 0;
-        time[0] = timeto;
+        score = 0;
+        time = timeto;
         this.timeto = timeto;
         this.level = level;
         this.panelChange = panelChange;
@@ -53,6 +56,10 @@ public class Board extends JPanel{
             initWorld();
             nOfBags = baggs.get(player).size();
         }
+        if(modStatue != ReplayMod) {
+            replayFileWriter = new ReplayFileWriter(level, timeto);
+        }
+
     }
 
 
@@ -211,6 +218,7 @@ public class Board extends JPanel{
 
     }
 
+
     public boolean checkWallCollision(Actor actor, int type, int player) {
         System.out.println(player);
         switch (type) {
@@ -253,7 +261,7 @@ public class Board extends JPanel{
     }
 
     public boolean checkBagCollision(Actor soko, int type, int player) {
-        score[0] += 50;
+        score += 50;
         switch (type) {
             case LEFT_COLLISION:
                 for (int i = 0; i < baggs.get(player).size(); i++) {
@@ -340,6 +348,8 @@ public class Board extends JPanel{
         }
         return false;
     }
+
+
     public void isCompleted(int player) {//게임 끝
         nOfBags = baggs.get(player).size();
         finishedBags = 0;
@@ -351,14 +361,14 @@ public class Board extends JPanel{
                 if (bag.x() == area.x() && bag.y() == area.y()) {//짐이 area 좌표의 위치와 같으면(잘 놨으면)
                     finishedBags += 1;
                     twoBags.put(player, finishedBags);
-                    score[0] += 1000;
+                    score += 1000;
                 }
             }
         }
     }
     public void restartLevel() {
-        score[0] = 0;
-        time[0] = timeto;
+        score = 0;
+        time = timeto;
         areas.clear();
         baggs.clear();
         walls.clear();

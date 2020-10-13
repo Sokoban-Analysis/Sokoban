@@ -2,7 +2,11 @@ package com.zetcode.var;
 
 import com.zetcode.frame.PanelChange;
 import com.zetcode.game.Player;
+import com.zetcode.listener.BoardKeyListner;
+import com.zetcode.replay.ReplayFileReader;
+import com.zetcode.replay.ReplayFileWriter;
 
+import java.io.FileWriter;
 import java.net.URL;
 import java.util.concurrent.Executors;
 import java.util.concurrent.ScheduledExecutorService;
@@ -10,8 +14,8 @@ import java.util.concurrent.ScheduledExecutorService;
 public class StaticVar {
     public static int Xoffset = 0;//거리
     public static int Yoffset = 0;//거리
-    public static int[] score = new int[2];
-    public static double[] time = new double[2];
+    public static int score;
+    public static double time;
     public static Player[] soko = new Player[2];
     public static ScheduledExecutorService scoreTimer;
     public static final int SPACE = 20;
@@ -24,62 +28,10 @@ public class StaticVar {
     public static final int FAILED = 0;
     public static final int OnePLAYER = 1;
     public static final int TwoPLAYER = 2;
+    public static final int ReplayMod = 3;
     public static int modStatue = OnePLAYER;
     public static PanelChange panelChange = new PanelChange();
-
-    public static String level1
-            ="####### \n" +
-            "#@  # # \n" +
-            "#   $ # \n" +
-            "#   $ # \n" +
-            "# ..  # \n" +
-            "#  *  # \n" +
-            "####### \n";
-
-    public static String level2
-            =" ####    \n" +
-            "  #  ##### \n" +
-            "### .#   # \n" +
-            "#@  $    # \n" +
-            "# ## ##### \n" +
-            "#   $  #   \n" +
-            "### .  #   \n" +
-            "  #  ###   \n" +
-            "  ####   \n";
-
-    public static String level3
-            ="######### \n"
-            +"#       # \n"
-            +"# # #$.## \n"
-            +"#    $.#  \n"
-            +"# # #$.#  \n"
-            +"#       # \n"
-            +"#####@  # \n"
-            +"    ####  \n";
-
-    public static String level4
-            ="###############\n" +
-            "# #   #   ## .#\n" +
-            "#  # $    $  .#\n" +
-            "#      #  #   #\n" +
-            "#    $## ##   #\n" +
-            "#$    #  .#  $#\n" +
-            "#   ###  ##   #\n" +
-            "#   ## $  #  ##\n" +
-            "#...#     #  @#\n" +
-            "###############\n";
-
-    public static String level5
-            = "    ######\n"
-            + "    ##   #\n"
-            + "    ##$  #\n"
-            + "  ####  $##\n"
-            + "  ##  $ $ #\n"
-            + "#### # ## #   ######\n"
-            + "##   # ## #####  ..#\n"
-            + "## $  $          ..#\n"
-            + "###### ### #@##  ..#\n"
-            + "    ##     #########\n"
-            + "    ########\n";
+    public static BoardKeyListner boardKeyListner;
+    public static ReplayFileReader replayFileReader;
 
 }
