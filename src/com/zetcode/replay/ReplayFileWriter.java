@@ -31,12 +31,25 @@ public class ReplayFileWriter {
         }else{
             file = new File("src/resources/data/replay/"+ time +"-1.txt");
         }
-        try { file.createNewFile();} catch (IOException e) { }
+        if (conMod){
+            if(modStatue == TwoPLAYER){
+                file = new File("src/resources/data/continue/continue-2.txt");
+            }else{
+                file = new File("src/resources/data/continue/continue-1.txt");
+            }
+        }else{
+            if(modStatue == TwoPLAYER){
+                file = new File("src/resources/data/replay/"+ time +"-2.txt");
+            }else{
+                file = new File("src/resources/data/replay/"+ time +"-1.txt");
+            }
+            try { file.createNewFile();} catch (IOException e) { }
+            fileWrite(level.replaceAll("[^0-9]",""));
+            fileWrite(String.valueOf(duration));
+        }
         saveStatue = false;
         System.out.println(file.getName());
         keyCode = 0;
-        fileWrite(level.replaceAll("[^0-9]",""));
-        fileWrite(String.valueOf(duration));
     }
 
 
@@ -52,6 +65,26 @@ public class ReplayFileWriter {
             writer.write(str + "\n");
             writer.close();
             saveStatue = false;
+        }catch (Exception e){}
+    }
+
+    public void setContinueFile(){
+        if(conMod){ return; }
+        File conFile;
+        if(modStatue == TwoPLAYER){
+            conFile = new File("src/resources/data/continue/continue-2.txt");
+        }else{
+            conFile = new File("src/resources/data/continue/continue-1.txt");
+        }
+        try{
+            FileInputStream fis = new FileInputStream(file); //읽을파일
+            FileOutputStream fos = new FileOutputStream(conFile); //복사할파일
+            int fileByte = 0;
+            while((fileByte = fis.read()) != -1) {
+                fos.write(fileByte);
+            }
+            fis.close();
+            fos.close();
         }catch (Exception e){}
     }
 

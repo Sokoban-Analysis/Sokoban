@@ -2,6 +2,7 @@ package com.zetcode.var;
 
 import com.zetcode.frame.PanelChange;
 import com.zetcode.game.Player;
+import com.zetcode.game.SoundSystem;
 import com.zetcode.listener.BoardKeyListner;
 import com.zetcode.replay.ReplayFileReader;
 import com.zetcode.replay.ReplayFileWriter;

@@ -51,7 +51,6 @@ public class BoardUI extends JPanel implements ActionListener {
                 int key = replayFileReader.getNextKey();
                 if(key == 0){
                     time = replayFileReader.getFinalTime();
-                    conMod = false;
                     break;
                 }
                 boardKeyListner.keyEventProcess(key);
@@ -67,6 +66,7 @@ public class BoardUI extends JPanel implements ActionListener {
         scoreLabel = new MakeLabel(720, 89, 300, 70, 60f);
         scoreLabel.add(this);
         soundBG = new SoundSystem("/resources/background.wav");
+        soundBG.loop();
         soundBG.play();
         backButton = new MakeButton(this, backButtonpath, backButtonDownpath);
         backButton.setup(1150, 591, 100, 100, this::actionPerformed);
@@ -94,30 +94,10 @@ public class BoardUI extends JPanel implements ActionListener {
             board.panelChange.changePanel();
             board.removeAll();
             board.validate();
-            continuFileWrite();
+            board.replayFileWriter.setContinueFile();
         }
     }
 
-    private void continuFileWrite(){
-        File file = new File("src/resources/data/replay");
-        File file1 = file.listFiles()[file.listFiles().length-1];
-        File conFile;
-        if(modStatue == TwoPLAYER){
-            conFile = new File("src/resources/data/continue/continue-2.txt");
-        }else{
-            conFile = new File("src/resources/data/continue/continue-1.txt");
-        }
-        try{
-            FileInputStream fis = new FileInputStream(file1); //읽을파일
-            FileOutputStream fos = new FileOutputStream(conFile); //복사할파일
-            int fileByte = 0;
-            while((fileByte = fis.read()) != -1) {
-                fos.write(fileByte);
-            }
-            fis.close();
-            fos.close();
-        }catch (Exception e){}
-    }
 
     public void setScore(){
         String scoreStr = "";

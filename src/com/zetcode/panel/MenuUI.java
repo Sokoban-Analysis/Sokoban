@@ -113,18 +113,23 @@ public class MenuUI extends JPanel implements ActionListener {
     public void actionPerformed(ActionEvent e) {
         // TODO Auto-generated method stub
         if(e.getSource()==levelButton[0].getButton()){
+            conMod = false;
             change.initBoard(levelFileRead(1), 10);
             change.changePanel();
         }else if(e.getSource()==levelButton[1].getButton()){
+            conMod = false;
             change.initBoard(levelFileRead(2), 10);
             change.changePanel();
         }else if(e.getSource()==levelButton[2].getButton()){
+            conMod = false;
             change.initBoard(levelFileRead(3), 30);
             change.changePanel();
         }else if(e.getSource()==levelButton[3].getButton()){
+            conMod = false;
             change.initBoard(levelFileRead(4), 40);
             change.changePanel();
         }else if(e.getSource()==levelButton[4].getButton()){
+            conMod = false;
             change.initBoard(levelFileRead(5), 50);
             change.changePanel();
         }else if(e.getSource()==modButton[1].getButton()){

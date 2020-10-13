@@ -1,6 +1,7 @@
 package com.zetcode.panel;
 
 import com.zetcode.frame.PanelChange;
+import com.zetcode.game.SoundSystem;
 import com.zetcode.tool.MakeButton;
 
 import javax.swing.*;
@@ -21,12 +22,15 @@ public class MainUI extends JPanel implements ActionListener {
     private URL playButtonPath = getClass().getClassLoader().getResource("resources/main/playButton.png");
     private URL playButtonDownPath = getClass().getClassLoader().getResource("resources/main/playButtonDown.png");
     private MakeButton playbutton;
+    public SoundSystem soundMenuBG;
 
     public MainUI(PanelChange change) {
         setLayout(null);
         this.change = change;
         playbutton = new MakeButton(this, playButtonPath, playButtonDownPath);
         playbutton.setup(500,432,298,128, this::actionPerformed);
+        soundMenuBG = new SoundSystem("/resources/soundMain.wav");
+/*        soundMenuBG.play();*/
     }
 
 
