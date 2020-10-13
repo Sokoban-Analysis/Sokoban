@@ -30,11 +30,12 @@ public class ReplayFileReader {
     }
 
     public int getNextKey(){
-        index++;
+        int key = Integer.parseInt(arrayList.get(index).split("-")[0]);
         if(index < arrayList.size()){
-            return Integer.parseInt(arrayList.get(index).split("-")[0]);
+            index++;
+            return key;
         }else{
-            modStatue = OnePLAYER;
+            replayMod = false;
             return 0;
         }
     }

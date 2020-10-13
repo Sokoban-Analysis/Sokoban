@@ -133,10 +133,14 @@ public class MenuUI extends JPanel implements ActionListener {
             modStatue = TwoPLAYER;
             SetUpMod();
         }else if(e.getSource()==modButton[0].getButton()){
-            modStatue = ReplayMod;
-            File file = new File("src/resources/data/replay/2020.10.13.19.18.58-0.txt");
+/*            replayMod = true;
+            File file = new File("src/resources/data/replay/2020.10.13.22.49.43-2.txt");
+            modStatue = TwoPLAYER;
             replayFileReader = new ReplayFileReader(file);
             change.initBoard(levelFileRead(replayFileReader.level), replayFileReader.time);
+            change.changePanel();*/
+        }else if(e.getSource()==modButton[3].getButton()){
+            change.initReplayUI();
             change.changePanel();
         }
     }

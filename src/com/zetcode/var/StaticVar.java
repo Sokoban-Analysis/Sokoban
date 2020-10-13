@@ -28,8 +28,8 @@ public class StaticVar {
     public static final int FAILED = 0;
     public static final int OnePLAYER = 1;
     public static final int TwoPLAYER = 2;
-    public static final int ReplayMod = 3;
     public static int modStatue = OnePLAYER;
+    public static boolean replayMod = false;
     public static PanelChange panelChange = new PanelChange();
     public static BoardKeyListner boardKeyListner;
     public static ReplayFileReader replayFileReader;

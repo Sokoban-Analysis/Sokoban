@@ -22,13 +22,14 @@ public class BoardKeyListner extends KeyAdapter{
             player1 = 1;
             player2 = 2;
         }else{
+            System.out.println("한명이다");
             player1 = 0;
         }
     }
 
     @Override
     public void keyPressed(KeyEvent e) {
-        if (board.isCompleted || modStatue == ReplayMod) {
+        if (board.isCompleted || replayMod) {
             return;
         }
         int key = e.getKeyCode();
@@ -36,9 +37,10 @@ public class BoardKeyListner extends KeyAdapter{
     }
 
     public void keyEventProcess(int key){
+        System.out.println(key);
+        FileWritebyMod(key);
         switch (key) {
             case KeyEvent.VK_LEFT:
-                FileWritebyMod(player1);
                 if (board.checkWallCollision(soko[0], LEFT_COLLISION, this.player1)) {
                     System.out.println("레프트 월");
                     return;
@@ -50,7 +52,6 @@ public class BoardKeyListner extends KeyAdapter{
                 soko[0].move(-SPACE, 0);
                 break;
             case KeyEvent.VK_RIGHT:
-                FileWritebyMod(player1);
                 if (board.checkWallCollision(soko[0], RIGHT_COLLISION, this.player1)) {
                     System.out.println("레프트 월");
                     return;
@@ -62,7 +63,6 @@ public class BoardKeyListner extends KeyAdapter{
                 soko[0].move(SPACE, 0);
                 break;
             case KeyEvent.VK_UP:
-                FileWritebyMod(player1);
                 if (board.checkWallCollision(soko[0], TOP_COLLISION, this.player1)) {
                     System.out.println("탑 월");
                     return;
@@ -74,7 +74,6 @@ public class BoardKeyListner extends KeyAdapter{
                 soko[0].move(0, -SPACE);
                 break;
             case KeyEvent.VK_DOWN:
-                FileWritebyMod(player1);
                 if (board.checkWallCollision(soko[0], BOTTOM_COLLISION,this.player1)) {
                     System.out.println("다운 월");
                     return;
@@ -86,7 +85,7 @@ public class BoardKeyListner extends KeyAdapter{
                 break;
             case KeyEvent.VK_A:
                 if (modStatue != TwoPLAYER) return;
-                FileWritebyMod(player2);
+
                 if (board.checkWallCollision(soko[1], LEFT_COLLISION, this.player2)) {
                     return;
                 }
@@ -97,7 +96,6 @@ public class BoardKeyListner extends KeyAdapter{
                 break;
             case KeyEvent.VK_D:
                 if (modStatue != TwoPLAYER) return;
-                FileWritebyMod(player2);
                 if (board.checkWallCollision(soko[1], RIGHT_COLLISION, this.player2)) {
                     return;
                 }
@@ -108,7 +106,7 @@ public class BoardKeyListner extends KeyAdapter{
                 break;
             case KeyEvent.VK_W:
                 if (modStatue != TwoPLAYER) return;
-                FileWritebyMod(player2);
+
                 if (board.checkWallCollision(soko[1], TOP_COLLISION, this.player2)) {
                     return;
                 }
@@ -119,7 +117,6 @@ public class BoardKeyListner extends KeyAdapter{
                 break;
             case KeyEvent.VK_S:
                 if (modStatue != TwoPLAYER) return;
-                FileWritebyMod(player2);
                 if (board.checkWallCollision(soko[1], BOTTOM_COLLISION, this.player2)) {
                     return;
                 }
@@ -134,18 +131,13 @@ public class BoardKeyListner extends KeyAdapter{
             default:
                 break;
         }
-        if(modStatue != ReplayMod){
-            board.replayFileWriter.setKetCode(key);
-        }
         board.repaint();
     }
 
-    private void FileWritebyMod(int player){
-        if(modStatue != ReplayMod){
-            board.replayFileWriter.setPlayer(player1);
+    private void FileWritebyMod(int key){
+        if(!replayMod){
+            board.replayFileWriter.setKetCode(key);
         }
     }
-
-
 }
 

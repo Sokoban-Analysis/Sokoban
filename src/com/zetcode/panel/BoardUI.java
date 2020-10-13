@@ -74,6 +74,7 @@ public class BoardUI extends JPanel implements ActionListener {
     public void actionPerformed(ActionEvent e) {
         // TODO Auto-generated method stub
         if(e.getSource()==backButton.getButton()){
+            replayMod = false;
             soundBG.stop();
             scoreTimer.shutdown();
             board.isCompleted = true;
@@ -108,9 +109,9 @@ public class BoardUI extends JPanel implements ActionListener {
             public void run() {
                 time = (time - 0.01);
                 timeLabel.setText(String.format("%.2f", time));
-                if(modStatue == ReplayMod){
+                if(replayMod){
                    if(String.format("%.2f", time).equals(replayFileReader.getTime())){
-                       boardKeyListner.keyEventReplay(replayFileReader.getNextKey());
+                       boardKeyListner.keyEventProcess(replayFileReader.getNextKey());
                    }
                 }else{
                     board.replayFileWriter.saveReplay(String.format("%.2f", time));
@@ -132,6 +133,7 @@ public class BoardUI extends JPanel implements ActionListener {
                     menuButton.setup(475, 422, 348, 108, new ActionListener() {
                         @Override
                         public void actionPerformed(ActionEvent e) {
+                            modStatue = OnePLAYER;
                             board.panelChange.StopBoard();
                             board.panelChange.changePanel();
                             board.removeAll();
@@ -162,6 +164,7 @@ public class BoardUI extends JPanel implements ActionListener {
                         menuButton.setup(475, 422, 348, 108, new ActionListener() {
                             @Override
                             public void actionPerformed(ActionEvent e) {
+                                modStatue = OnePLAYER;
                                 board.panelChange.StopBoard();
                                 board.panelChange.changePanel();
                                 board.removeAll();

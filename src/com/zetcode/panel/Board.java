@@ -56,7 +56,7 @@ public class Board extends JPanel{
             initWorld();
             nOfBags = baggs.get(player).size();
         }
-        if(modStatue != ReplayMod) {
+        if(!replayMod) {
             replayFileWriter = new ReplayFileWriter(level, timeto);
         }
 
@@ -220,7 +220,6 @@ public class Board extends JPanel{
 
 
     public boolean checkWallCollision(Actor actor, int type, int player) {
-        System.out.println(player);
         switch (type) {
             case LEFT_COLLISION:
                 for (int i = 0; i < walls.get(player).size(); i++) {

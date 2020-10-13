@@ -25,8 +25,67 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cdbf11fd-8829-45d4-95d5-fae79ca40161" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/com/zetcode/panel/ReplayListUI.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/resources/data/replay/2020.10.13.22.32.17-1.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/resources/data/replay/2020.10.13.22.36.46-1.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/resources/data/replay/2020.10.13.22.39.3-1.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/resources/data/replay/2020.10.13.22.41.21-1.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/resources/data/replay/2020.10.13.22.41.21-2.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/resources/data/replay/2020.10.13.22.49.16-1.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/resources/data/replay/2020.10.13.22.49.43-2.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/resources/menu/replayUI.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/zetcode/frame/PanelChange.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/zetcode/frame/PanelChange.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/zetcode/listener/BoardKeyListner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/zetcode/listener/BoardKeyListner.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/zetcode/panel/Board.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/zetcode/panel/Board.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/zetcode/panel/BoardUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/zetcode/panel/BoardUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/zetcode/panel/MenuUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/zetcode/panel/MenuUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/zetcode/replay/ReplayFileReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/zetcode/replay/ReplayFileReader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/zetcode/replay/ReplayFileWriter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/zetcode/replay/ReplayFileWriter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/zetcode/var/StaticVar.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/zetcode/var/StaticVar.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/data/replay/2020.10.13.18.42.55-0.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/data/replay/2020.10.13.18.44.7-0.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/data/replay/2020.10.13.18.50.33-0.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/data/replay/2020.10.13.18.54.34-0.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/data/replay/2020.10.13.18.54.48-0.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/data/replay/2020.10.13.18.55.24-0.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/data/replay/2020.10.13.18.55.3-0.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/data/replay/2020.10.13.18.55.40-0.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/data/replay/2020.10.13.18.56.49-0.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/data/replay/2020.10.13.18.57.28-0.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/data/replay/2020.10.13.18.59.28-0.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/data/replay/2020.10.13.18.59.51-0.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/data/replay/2020.10.13.19.0.21-0.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/data/replay/2020.10.13.19.0.42-0.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/data/replay/2020.10.13.19.17.37-0.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/data/replay/2020.10.13.19.18.58-0.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/data/replay/2020.10.13.19.2.18-0.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/data/replay/2020.10.13.19.2.36-0.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/data/replay/2020.10.13.19.2.4-0.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/data/replay/2020.10.13.19.22.2-0.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/data/replay/2020.10.13.19.3.44-0.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/data/replay/2020.10.13.19.31.7-0.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/data/replay/2020.10.13.19.7.3-0.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/data/replay/2020.10.13.20.52.57-0.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/data/replay/2020.10.13.20.53.0-1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/data/replay/2020.10.13.22.32.17-2.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/data/replay/2020.10.13.20.53.0-2.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/data/replay/2020.10.13.22.36.46-2.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/data/replay/2020.10.13.20.53.2-1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/data/replay/2020.10.13.22.39.3-2.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/data/replay/2020.10.13.20.53.2-2.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/data/replay/2020.10.13.22.39.38-1.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/data/replay/2020.10.13.20.53.27-1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/data/replay/2020.10.13.22.39.38-2.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/data/replay/2020.10.13.20.53.27-2.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/data/replay/2020.10.13.20.53.37-1.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/data/replay/2020.10.13.20.53.37-2.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/data/replay/2020.10.13.20.54.15-0.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/data/replay/2020.10.13.20.54.36-1.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/data/replay/2020.10.13.20.54.36-2.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/data/replay/2020.10.13.20.55.16-1.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/data/replay/2020.10.13.20.55.16-2.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/data/replay/2020.10.13.20.55.30-1.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/data/replay/2020.10.13.20.55.30-2.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/data/replay/2020.10.13.20.55.56-1.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/data/replay/2020.10.13.20.55.56-2.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/data/replay/2020.10.13.21.10.21-1.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/data/replay/2020.10.13.21.10.21-2.txt" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -167,6 +226,10 @@
       <screen x="0" y="0" width="2560" height="1440" />
     </state>
     <state x="760" y="294" key="#Project_Structure/0.0.2560.1440/-1920.349.1920.1080@0.0.2560.1440" timestamp="1602516304605" />
+    <state x="1010" y="475" key="#com.intellij.codeInsight.editorActions.RestoreReferencesDialog" timestamp="1602599270368">
+      <screen x="0" y="0" width="2560" height="1440" />
+    </state>
+    <state x="1010" y="475" key="#com.intellij.codeInsight.editorActions.RestoreReferencesDialog/0.0.2560.1440/-1920.349.1920.1080@0.0.2560.1440" timestamp="1602599270368" />
     <state x="558" y="110" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1602516747487">
       <screen x="0" y="0" width="2560" height="1440" />
     </state>
@@ -205,31 +268,31 @@
       <screen x="0" y="0" width="2560" height="1440" />
     </state>
     <state x="970" y="201" width="915" height="508" key="EnvironmentVariablesDialog/0.0.2560.1440/-1920.349.1920.1080@0.0.2560.1440" timestamp="1602516721710" />
-    <state x="915" y="222" key="FileChooserDialogImpl" timestamp="1602569840878">
+    <state x="915" y="222" key="FileChooserDialogImpl" timestamp="1602597731670">
       <screen x="0" y="0" width="2560" height="1440" />
     </state>
     <state x="549" y="127" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1600493172155" />
-    <state x="915" y="222" key="FileChooserDialogImpl/0.0.2560.1440/-1920.349.1920.1080@0.0.2560.1440" timestamp="1602569840878" />
-    <state width="2517" height="355" key="GridCell.Tab.0.bottom" timestamp="1602590112673">
+    <state x="915" y="222" key="FileChooserDialogImpl/0.0.2560.1440/-1920.349.1920.1080@0.0.2560.1440" timestamp="1602597731670" />
+    <state width="2517" height="174" key="GridCell.Tab.0.bottom" timestamp="1602600079046">
       <screen x="0" y="0" width="2560" height="1440" />
     </state>
     <state width="1230" height="195" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1602443474946" />
-    <state width="2517" height="355" key="GridCell.Tab.0.bottom/0.0.2560.1440/-1920.349.1920.1080@0.0.2560.1440" timestamp="1602590112673" />
-    <state width="2517" height="355" key="GridCell.Tab.0.center" timestamp="1602590112673">
+    <state width="2517" height="174" key="GridCell.Tab.0.bottom/0.0.2560.1440/-1920.349.1920.1080@0.0.2560.1440" timestamp="1602600079046" />
+    <state width="2517" height="174" key="GridCell.Tab.0.center" timestamp="1602600079045">
       <screen x="0" y="0" width="2560" height="1440" />
     </state>
     <state width="1230" height="195" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1602443474946" />
-    <state width="2517" height="355" key="GridCell.Tab.0.center/0.0.2560.1440/-1920.349.1920.1080@0.0.2560.1440" timestamp="1602590112673" />
-    <state width="2517" height="355" key="GridCell.Tab.0.left" timestamp="1602590112673">
+    <state width="2517" height="174" key="GridCell.Tab.0.center/0.0.2560.1440/-1920.349.1920.1080@0.0.2560.1440" timestamp="1602600079045" />
+    <state width="2517" height="174" key="GridCell.Tab.0.left" timestamp="1602600079045">
       <screen x="0" y="0" width="2560" height="1440" />
     </state>
     <state width="1230" height="195" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1602443474946" />
-    <state width="2517" height="355" key="GridCell.Tab.0.left/0.0.2560.1440/-1920.349.1920.1080@0.0.2560.1440" timestamp="1602590112673" />
-    <state width="2517" height="355" key="GridCell.Tab.0.right" timestamp="1602590112673">
+    <state width="2517" height="174" key="GridCell.Tab.0.left/0.0.2560.1440/-1920.349.1920.1080@0.0.2560.1440" timestamp="1602600079045" />
+    <state width="2517" height="174" key="GridCell.Tab.0.right" timestamp="1602600079045">
       <screen x="0" y="0" width="2560" height="1440" />
     </state>
     <state width="1230" height="195" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1602443474946" />
-    <state width="2517" height="355" key="GridCell.Tab.0.right/0.0.2560.1440/-1920.349.1920.1080@0.0.2560.1440" timestamp="1602590112673" />
+    <state width="2517" height="174" key="GridCell.Tab.0.right/0.0.2560.1440/-1920.349.1920.1080@0.0.2560.1440" timestamp="1602600079045" />
     <state width="2517" height="154" key="GridCell.Tab.1.bottom" timestamp="1602585109265">
       <screen x="0" y="0" width="2560" height="1440" />
     </state>

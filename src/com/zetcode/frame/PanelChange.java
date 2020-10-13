@@ -1,10 +1,7 @@
 package com.zetcode.frame;
 
 import com.zetcode.listener.BoardKeyListner;
-import com.zetcode.panel.Board;
-import com.zetcode.panel.BoardUI;
-import com.zetcode.panel.MainUI;
-import com.zetcode.panel.MenuUI;
+import com.zetcode.panel.*;
 
 import javax.swing.*;
 import java.awt.*;
@@ -22,6 +19,7 @@ public class PanelChange extends JFrame {
     public Board board = null;
     public MainUI mainUi = null;
     public MenuUI menuUI = null;
+    public ReplayListUI replayListUI = null;
     private CardLayout cards = new CardLayout();
 
     public PanelChange() {
@@ -43,7 +41,6 @@ public class PanelChange extends JFrame {
         getContentPane().addKeyListener(boardKeyListner);
         getContentPane().setFocusable(true);
         setTitle("Sokoban - Board");
-        System.out.println(getContentPane().getComponents().length);
     }
 
     public void StopBoard(){
@@ -56,14 +53,18 @@ public class PanelChange extends JFrame {
         mainUi = new MainUI(this);
         getContentPane().add("main", mainUi);
         setTitle("Sokoban - MainUI");
-        System.out.println(getContentPane().getComponents().length);
+    }
+    public void initReplayUI(){
+        StopBoard();
+        replayListUI = new ReplayListUI(this);
+        getContentPane().add("replay", replayListUI);
+        setTitle("Sokoban - ReplayListUI");
     }
 
     public void initMenuUI(){
         menuUI = new MenuUI(this);
         getContentPane().add("menu", menuUI);
         setTitle("Sokoban - MenuUI");
-        System.out.println(getContentPane().getComponents().length);
     }
 
     public void changePanel(){
