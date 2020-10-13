@@ -52,7 +52,13 @@ public class ReplayFileReader {
         return arrayList.size();
     }
     public double getFinalTime(){
-        return Double.parseDouble(arrayList.get(arrayList.size() - 1).split("-")[2]);
+        double time;
+        if(arrayList.get(arrayList.size() - 1).split("-")[2] == null){
+            time = 0;
+        }else{
+            time = Double.parseDouble(arrayList.get(arrayList.size() - 1).split("-")[2]);
+        }
+        return time;
     }
 
     public void readLine(){
