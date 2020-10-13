@@ -14,7 +14,6 @@ public class MakeFont {
         this.size = size;
         try {
             //create the font to use. Specify the size!
-            URL url = getClass().getProtectionDomain().getCodeSource().getLocation();
             font = Font.createFont(Font.TRUETYPE_FONT, getClass().getResourceAsStream("/resources/powerpixel.ttf")).deriveFont(size);
             GraphicsEnvironment ge = GraphicsEnvironment.getLocalGraphicsEnvironment();
             //register the font

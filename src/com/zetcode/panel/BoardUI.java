@@ -47,6 +47,7 @@ public class BoardUI extends JPanel implements ActionListener {
         result = RUNNABLE;
         initLabel();
         runTimer();
+        System.out.println(board.panelChange.getContentPane().getComponents().length);
     }
 
     private void initLabel(){

@@ -95,6 +95,7 @@ public class MenuUI extends JPanel implements ActionListener {
         makeLabel = new MakeLabel(802, 167, 300,65, 60f);
         makeLabel.add(this);
         SetUpMod();
+        System.out.println(change.getContentPane().getComponents().length);
     }
 
     public void SetUpMod(){

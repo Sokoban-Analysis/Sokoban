@@ -32,7 +32,6 @@ public class PanelChange extends JFrame {
     }
 
     public void initBoard(String level, int timeto){
-        StopBoard();
         board = new Board(level, this ,timeto);
         boardKeyListner = new BoardKeyListner(board);
         board.setLayout(new BorderLayout());
@@ -45,7 +44,8 @@ public class PanelChange extends JFrame {
 
     public void StopBoard(){
         if(getContentPane().getComponents().length > 2){
-            getContentPane().remove(2);
+            System.out.println(getContentPane().getComponents().length);
+            getContentPane().remove(getContentPane().getComponents().length - 1);
         }
     }
 
@@ -55,7 +55,6 @@ public class PanelChange extends JFrame {
         setTitle("Sokoban - MainUI");
     }
     public void initReplayUI(){
-        StopBoard();
         replayListUI = new ReplayListUI(this);
         getContentPane().add("replay", replayListUI);
         setTitle("Sokoban - ReplayListUI");
@@ -68,6 +67,6 @@ public class PanelChange extends JFrame {
     }
 
     public void changePanel(){
-        cards.next(getContentPane());
+        cards.last(getContentPane());
     }
 }
