@@ -23,7 +23,8 @@ public class WinListner implements WindowListener {
 
     @Override
     public void windowClosing(WindowEvent e) {
-        if(board != null){
+        if(board == null) return;
+        if(board.replayFileWriter != null){
             board.replayFileWriter.setContinueFile();
         }
         System.exit(0);

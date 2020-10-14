@@ -118,7 +118,7 @@ public class MenuUI extends JPanel implements ActionListener {
             change.changePanel();
         }else if(e.getSource()==levelButton[1].getButton()){
             conMod = false;
-            change.initBoard(levelFileRead(2), 10);
+            change.initBoard(levelFileRead(2), 20);
             change.changePanel();
         }else if(e.getSource()==levelButton[2].getButton()){
             conMod = false;

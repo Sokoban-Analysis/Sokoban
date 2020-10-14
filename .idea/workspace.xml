@@ -25,38 +25,81 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cdbf11fd-8829-45d4-95d5-fae79ca40161" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/com/zetcode/listener/WinListner.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/resources/data/replay/2020.10.14.4.19.37-1.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/resources/data/replay/2020.10.14.4.23.6-1.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/resources/data/replay/2020.10.14.4.28.24-1.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/resources/data/replay/2020.10.14.4.28.5-1.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/resources/data/replay/2020.10.14.4.28.56-1.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/resources/data/replay/2020.10.14.4.32.2-1.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/resources/data/replay/2020.10.14.4.40.3-1.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/resources/data/replay/2020.10.14.4.40.7-1.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/resources/data/replay/2020.10.14.4.40.9-1.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/resources/data/replay/2020.10.14.4.41.48-1.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/resources/data/replay/2020.10.14.4.41.51-1.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/resources/data/replay/2020.10.14.4.41.52-1.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/resources/data/replay/2020.10.14.4.41.53-1.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/resources/data/replay/2020.10.14.4.42.4-1.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/resources/data/replay/2020.10.14.4.43.18-1.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/resources/data/replay/2020.10.14.4.44.34-1.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/resources/data/replay/2020.10.14.4.50.11-1.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/resources/data/replay/2020.10.14.4.50.14-1.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/resources/data/replay/2020.10.14.4.50.29-1.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/resources/data/replay/2020.10.14.4.50.32-1.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/resources/data/replay/2020.10.14.4.50.48-1.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/resources/data/replay/2020.10.14.4.51.11-1.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/resources/data/replay/2020.10.14.4.9.39-1.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/resources/data/replay/2020.10.14.4.9.47-1.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/resources/data/replay/2020.10.15.4.40.17-1.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/resources/data/replay/2020.10.15.4.40.41-1.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/resources/data/replay/2020.10.15.4.41.56-1.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/resources/data/replay/2020.10.15.4.42.29-1.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/resources/data/replay/2020.10.15.4.43.13-1.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/resources/data/replay/2020.10.15.4.44.16-1.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/resources/data/replay/2020.10.15.4.45.40-1.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/resources/data/replay/2020.10.15.4.46.43-1.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/zetcode/frame/PanelChange.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/zetcode/frame/PanelChange.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/zetcode/game/SoundSystem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/zetcode/game/SoundSystem.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/zetcode/panel/MainUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/zetcode/panel/MainUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/zetcode/listener/WinListner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/zetcode/listener/WinListner.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/zetcode/panel/BoardUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/zetcode/panel/BoardUI.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/zetcode/panel/MenuUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/zetcode/panel/MenuUI.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/zetcode/replay/ReplayFileReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/zetcode/replay/ReplayFileReader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/zetcode/var/StaticVar.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/zetcode/var/StaticVar.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/resources/data/continue/continue-1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/data/continue/continue-1.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/data/continue/continue-2.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/data/continue/continue-2.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/data/level/3.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/data/level/3.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/data/replay/2020.10.14.3.29.57-1.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/data/replay/2020.10.14.3.30.35-1.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/data/replay/2020.10.14.3.31.6-1.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/data/replay/2020.10.14.3.33.0-1.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/data/replay/2020.10.14.3.34.25-1.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/data/replay/2020.10.14.3.35.40-1.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/data/replay/2020.10.14.3.35.45-1.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/data/replay/2020.10.14.3.35.47-1.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/data/replay/2020.10.14.3.39.20-1.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/data/replay/2020.10.14.3.48.22-1.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/data/replay/2020.10.14.3.48.41-1.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/data/replay/2020.10.14.4.19.37-1.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/data/replay/2020.10.14.4.23.6-1.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/data/replay/2020.10.14.4.28.24-1.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/data/replay/2020.10.14.4.28.5-1.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/data/replay/2020.10.14.4.28.56-1.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/data/replay/2020.10.14.4.32.2-1.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/data/replay/2020.10.14.4.38.24-1.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/data/replay/2020.10.14.4.38.52-1.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/data/replay/2020.10.14.4.38.59-1.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/data/replay/2020.10.14.4.40.3-1.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/data/replay/2020.10.14.4.40.40-1.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/data/replay/2020.10.14.4.40.42-1.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/data/replay/2020.10.14.4.40.7-1.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/data/replay/2020.10.14.4.40.9-1.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/data/replay/2020.10.14.4.41.18-1.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/data/replay/2020.10.14.4.41.23-1.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/data/replay/2020.10.14.4.41.28-1.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/data/replay/2020.10.14.4.41.31-1.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/data/replay/2020.10.14.4.41.42-1.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/data/replay/2020.10.14.4.41.44-1.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/data/replay/2020.10.14.4.41.45-1.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/data/replay/2020.10.14.4.41.48-1.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/data/replay/2020.10.14.4.41.51-1.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/data/replay/2020.10.14.4.41.52-1.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/data/replay/2020.10.14.4.41.53-1.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/data/replay/2020.10.14.4.42.4-1.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/data/replay/2020.10.14.4.43.18-1.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/data/replay/2020.10.14.4.44.34-1.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/data/replay/2020.10.14.4.47.50-1.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/data/replay/2020.10.14.4.47.53-1.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/data/replay/2020.10.14.4.48.15-1.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/data/replay/2020.10.14.4.48.35-1.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/data/replay/2020.10.14.4.48.51-1.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/data/replay/2020.10.14.4.50.11-1.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/data/replay/2020.10.14.4.50.14-1.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/data/replay/2020.10.14.4.50.29-1.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/data/replay/2020.10.14.4.50.32-1.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/data/replay/2020.10.14.4.50.48-1.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/data/replay/2020.10.14.4.51.11-1.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/data/replay/2020.10.14.4.51.45-1.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/data/replay/2020.10.14.4.51.51-1.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/data/replay/2020.10.14.4.52.36-1.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/data/replay/2020.10.14.4.9.39-1.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/data/replay/2020.10.14.4.9.47-1.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/data/replay/2020.10.14.5.0.58-1.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/data/score.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/data/score.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -92,8 +135,8 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/resources/menu" />
-    <property name="project.structure.last.edited" value="Artifacts" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../BLDToolAddon" />
+    <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.3034483" />
     <property name="settings.editor.selected.configurable" value="configurable.group.tools" />
@@ -240,52 +283,61 @@
       <screen x="0" y="0" width="2560" height="1440" />
     </state>
     <state x="970" y="201" width="915" height="508" key="EnvironmentVariablesDialog/0.0.2560.1440/-1920.349.1920.1080@0.0.2560.1440" timestamp="1602516721710" />
-    <state x="915" y="222" key="FileChooserDialogImpl" timestamp="1602613470533">
+    <state x="915" y="222" key="FileChooserDialogImpl" timestamp="1602687825647">
       <screen x="0" y="0" width="2560" height="1440" />
     </state>
     <state x="549" y="127" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1600493172155" />
-    <state x="915" y="222" key="FileChooserDialogImpl/0.0.2560.1440/-1920.349.1920.1080@0.0.2560.1440" timestamp="1602613470533" />
-    <state width="2517" height="302" key="GridCell.Tab.0.bottom" timestamp="1602618751629">
+    <state x="-1234" y="516" key="FileChooserDialogImpl/0.0.2560.1440/-1920.349.1920.1080@-1920.349.1920.1080" timestamp="1602683251019" />
+    <state x="915" y="222" key="FileChooserDialogImpl/0.0.2560.1440/-1920.349.1920.1080@0.0.2560.1440" timestamp="1602687825647" />
+    <state width="2517" height="105" key="GridCell.Tab.0.bottom" timestamp="1602704500108">
       <screen x="0" y="0" width="2560" height="1440" />
     </state>
     <state width="1230" height="195" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1602443474946" />
-    <state width="2517" height="302" key="GridCell.Tab.0.bottom/0.0.2560.1440/-1920.349.1920.1080@0.0.2560.1440" timestamp="1602618751629" />
-    <state width="2517" height="302" key="GridCell.Tab.0.center" timestamp="1602618751628">
+    <state width="2517" height="154" key="GridCell.Tab.0.bottom/0.0.2560.1440/-1920.349.1920.1080@-1920.349.1920.1080" timestamp="1602624805241" />
+    <state width="2517" height="105" key="GridCell.Tab.0.bottom/0.0.2560.1440/-1920.349.1920.1080@0.0.2560.1440" timestamp="1602704500108" />
+    <state width="2517" height="105" key="GridCell.Tab.0.center" timestamp="1602704500108">
       <screen x="0" y="0" width="2560" height="1440" />
     </state>
     <state width="1230" height="195" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1602443474946" />
-    <state width="2517" height="302" key="GridCell.Tab.0.center/0.0.2560.1440/-1920.349.1920.1080@0.0.2560.1440" timestamp="1602618751628" />
-    <state width="2517" height="302" key="GridCell.Tab.0.left" timestamp="1602618751628">
+    <state width="2517" height="154" key="GridCell.Tab.0.center/0.0.2560.1440/-1920.349.1920.1080@-1920.349.1920.1080" timestamp="1602624805241" />
+    <state width="2517" height="105" key="GridCell.Tab.0.center/0.0.2560.1440/-1920.349.1920.1080@0.0.2560.1440" timestamp="1602704500108" />
+    <state width="2517" height="105" key="GridCell.Tab.0.left" timestamp="1602704500107">
       <screen x="0" y="0" width="2560" height="1440" />
     </state>
     <state width="1230" height="195" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1602443474946" />
-    <state width="2517" height="302" key="GridCell.Tab.0.left/0.0.2560.1440/-1920.349.1920.1080@0.0.2560.1440" timestamp="1602618751628" />
-    <state width="2517" height="302" key="GridCell.Tab.0.right" timestamp="1602618751628">
+    <state width="2517" height="154" key="GridCell.Tab.0.left/0.0.2560.1440/-1920.349.1920.1080@-1920.349.1920.1080" timestamp="1602624805241" />
+    <state width="2517" height="105" key="GridCell.Tab.0.left/0.0.2560.1440/-1920.349.1920.1080@0.0.2560.1440" timestamp="1602704500107" />
+    <state width="2517" height="105" key="GridCell.Tab.0.right" timestamp="1602704500108">
       <screen x="0" y="0" width="2560" height="1440" />
     </state>
     <state width="1230" height="195" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1602443474946" />
-    <state width="2517" height="302" key="GridCell.Tab.0.right/0.0.2560.1440/-1920.349.1920.1080@0.0.2560.1440" timestamp="1602618751628" />
-    <state width="2517" height="154" key="GridCell.Tab.1.bottom" timestamp="1602616774096">
-      <screen x="0" y="0" width="2560" height="1440" />
+    <state width="2517" height="154" key="GridCell.Tab.0.right/0.0.2560.1440/-1920.349.1920.1080@-1920.349.1920.1080" timestamp="1602624805241" />
+    <state width="2517" height="105" key="GridCell.Tab.0.right/0.0.2560.1440/-1920.349.1920.1080@0.0.2560.1440" timestamp="1602704500108" />
+    <state width="2517" height="154" key="GridCell.Tab.1.bottom" timestamp="1602624805241">
+      <screen x="-1920" y="349" width="1920" height="1080" />
     </state>
+    <state width="2517" height="154" key="GridCell.Tab.1.bottom/0.0.2560.1440/-1920.349.1920.1080@-1920.349.1920.1080" timestamp="1602624805241" />
     <state width="2517" height="154" key="GridCell.Tab.1.bottom/0.0.2560.1440/-1920.349.1920.1080@0.0.2560.1440" timestamp="1602616774096" />
-    <state width="2517" height="154" key="GridCell.Tab.1.center" timestamp="1602616774095">
-      <screen x="0" y="0" width="2560" height="1440" />
+    <state width="2517" height="154" key="GridCell.Tab.1.center" timestamp="1602624805241">
+      <screen x="-1920" y="349" width="1920" height="1080" />
     </state>
+    <state width="2517" height="154" key="GridCell.Tab.1.center/0.0.2560.1440/-1920.349.1920.1080@-1920.349.1920.1080" timestamp="1602624805241" />
     <state width="2517" height="154" key="GridCell.Tab.1.center/0.0.2560.1440/-1920.349.1920.1080@0.0.2560.1440" timestamp="1602616774095" />
-    <state width="2517" height="154" key="GridCell.Tab.1.left" timestamp="1602616774095">
-      <screen x="0" y="0" width="2560" height="1440" />
+    <state width="2517" height="154" key="GridCell.Tab.1.left" timestamp="1602624805241">
+      <screen x="-1920" y="349" width="1920" height="1080" />
     </state>
+    <state width="2517" height="154" key="GridCell.Tab.1.left/0.0.2560.1440/-1920.349.1920.1080@-1920.349.1920.1080" timestamp="1602624805241" />
     <state width="2517" height="154" key="GridCell.Tab.1.left/0.0.2560.1440/-1920.349.1920.1080@0.0.2560.1440" timestamp="1602616774095" />
-    <state width="2517" height="154" key="GridCell.Tab.1.right" timestamp="1602616774095">
-      <screen x="0" y="0" width="2560" height="1440" />
+    <state width="2517" height="154" key="GridCell.Tab.1.right" timestamp="1602624805241">
+      <screen x="-1920" y="349" width="1920" height="1080" />
     </state>
+    <state width="2517" height="154" key="GridCell.Tab.1.right/0.0.2560.1440/-1920.349.1920.1080@-1920.349.1920.1080" timestamp="1602624805241" />
     <state width="2517" height="154" key="GridCell.Tab.1.right/0.0.2560.1440/-1920.349.1920.1080@0.0.2560.1440" timestamp="1602616774095" />
-    <state x="575" y="91" key="SettingsEditor" timestamp="1602516953635">
+    <state x="575" y="91" key="SettingsEditor" timestamp="1602621513530">
       <screen x="0" y="0" width="2560" height="1440" />
     </state>
     <state x="345" y="52" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1602172827092" />
-    <state x="575" y="91" key="SettingsEditor/0.0.2560.1440/-1920.349.1920.1080@0.0.2560.1440" timestamp="1602516953635" />
+    <state x="575" y="91" key="SettingsEditor/0.0.2560.1440/-1920.349.1920.1080@0.0.2560.1440" timestamp="1602621513530" />
     <state width="498" height="446" key="SwitcherDM" timestamp="1602517993868">
       <screen x="0" y="0" width="2560" height="1440" />
     </state>
@@ -302,10 +354,10 @@
       <screen x="0" y="0" width="2560" height="1440" />
     </state>
     <state x="92" y="92" width="2376" height="1256" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog/0.0.2560.1440/-1920.349.1920.1080@0.0.2560.1440" timestamp="1602454505233" />
-    <state x="-2193" y="713" width="1782" height="866" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1602616168338">
-      <screen x="-1920" y="349" width="1920" height="1080" />
+    <state x="585" y="316" width="1782" height="866" maximized="true" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1602641574074">
+      <screen x="0" y="0" width="2560" height="1440" />
     </state>
-    <state x="-2193" y="713" width="1782" height="866" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.0.2560.1440/-1920.349.1920.1080@0.0.2560.1440" timestamp="1602616168338" />
+    <state x="585" y="316" width="1782" height="866" maximized="true" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.0.2560.1440/-1920.349.1920.1080@0.0.2560.1440" timestamp="1602641574074" />
     <state x="970" y="568" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1602498741689">
       <screen x="0" y="0" width="2560" height="1440" />
     </state>
@@ -329,5 +381,16 @@
     </state>
     <state x="447" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1602302324165" />
     <state x="745" y="253" width="1120" height="1185" key="search.everywhere.popup/0.0.2560.1440/-1920.349.1920.1080@0.0.2560.1440" timestamp="1602570468264" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/com/zetcode/replay/ReplayFileWriter.java</url>
+          <line>40</line>
+          <option name="timeStamp" value="7" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

@@ -35,5 +35,4 @@ public class StaticVar {
     public static PanelChange panelChange = new PanelChange();
     public static BoardKeyListner boardKeyListner;
     public static ReplayFileReader replayFileReader;
-
 }

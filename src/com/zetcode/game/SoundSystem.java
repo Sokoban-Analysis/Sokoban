@@ -52,6 +52,4 @@ public class SoundSystem {
     public void loop(){
         clip.loop(clip.LOOP_CONTINUOUSLY);
     }
-
-
 }

@@ -94,7 +94,9 @@ public class BoardUI extends JPanel implements ActionListener {
             board.panelChange.changePanel();
             board.removeAll();
             board.validate();
-            board.replayFileWriter.setContinueFile();
+            if(board.replayFileWriter != null) {
+                board.replayFileWriter.setContinueFile();
+            }
         }
     }
 
@@ -147,7 +149,6 @@ public class BoardUI extends JPanel implements ActionListener {
                     menuButton.setup(475, 422, 348, 108, new ActionListener() {
                         @Override
                         public void actionPerformed(ActionEvent e) {
-                            modStatue = OnePLAYER;
                             board.panelChange.StopBoard();
                             board.panelChange.changePanel();
                             board.removeAll();
@@ -178,7 +179,6 @@ public class BoardUI extends JPanel implements ActionListener {
                         menuButton.setup(475, 422, 348, 108, new ActionListener() {
                             @Override
                             public void actionPerformed(ActionEvent e) {
-                                modStatue = OnePLAYER;
                                 board.panelChange.StopBoard();
                                 board.panelChange.changePanel();
                                 board.removeAll();

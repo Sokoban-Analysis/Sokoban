@@ -44,9 +44,6 @@ public class ReplayFileReader {
         return arrayList.get(index).split("-")[2];
     }
 
-    public double getScore(){
-        return Integer.parseInt(arrayList.get(index).split("-")[1]);
-    }
 
     public int getLength(){
         return arrayList.size();
